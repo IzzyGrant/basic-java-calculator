@@ -180,7 +180,7 @@ public class calcForm extends javax.swing.JFrame {
         jScrollPane11.setViewportView(btn18);
 
         btn19.setEditable(false);
-        btn19.setBackground(new java.awt.Color(75, 29, 63));
+        btn19.setBackground(new java.awt.Color(0, 204, 0));
         btn19.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 153, 153), new java.awt.Color(51, 255, 204)));
         btn19.setFont(new java.awt.Font("Roboto", 0, 36)); // NOI18N
         btn19.setForeground(new java.awt.Color(255, 255, 255));
@@ -191,7 +191,7 @@ public class calcForm extends javax.swing.JFrame {
         jScrollPane12.setViewportView(btn19);
 
         btn20.setEditable(false);
-        btn20.setBackground(new java.awt.Color(75, 29, 63));
+        btn20.setBackground(new java.awt.Color(0, 51, 51));
         btn20.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 153, 153), new java.awt.Color(51, 255, 204)));
         btn20.setFont(new java.awt.Font("Roboto", 0, 36)); // NOI18N
         btn20.setForeground(new java.awt.Color(255, 255, 255));
@@ -202,7 +202,7 @@ public class calcForm extends javax.swing.JFrame {
         jScrollPane13.setViewportView(btn20);
 
         btn21.setEditable(false);
-        btn21.setBackground(new java.awt.Color(75, 29, 63));
+        btn21.setBackground(new java.awt.Color(0, 51, 51));
         btn21.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 153, 153), new java.awt.Color(51, 255, 204)));
         btn21.setFont(new java.awt.Font("Roboto", 0, 36)); // NOI18N
         btn21.setForeground(new java.awt.Color(255, 255, 255));
@@ -213,7 +213,7 @@ public class calcForm extends javax.swing.JFrame {
         jScrollPane14.setViewportView(btn21);
 
         btn22.setEditable(false);
-        btn22.setBackground(new java.awt.Color(75, 29, 63));
+        btn22.setBackground(new java.awt.Color(0, 51, 51));
         btn22.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 153, 153), new java.awt.Color(51, 255, 204)));
         btn22.setFont(new java.awt.Font("Roboto", 0, 36)); // NOI18N
         btn22.setForeground(new java.awt.Color(255, 255, 255));
@@ -224,7 +224,7 @@ public class calcForm extends javax.swing.JFrame {
         jScrollPane15.setViewportView(btn22);
 
         btn23.setEditable(false);
-        btn23.setBackground(new java.awt.Color(75, 29, 63));
+        btn23.setBackground(new java.awt.Color(0, 51, 51));
         btn23.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 153, 153), new java.awt.Color(51, 255, 204)));
         btn23.setFont(new java.awt.Font("Roboto", 0, 36)); // NOI18N
         btn23.setForeground(new java.awt.Color(255, 255, 255));
@@ -246,7 +246,7 @@ public class calcForm extends javax.swing.JFrame {
         jScrollPane17.setViewportView(btn24);
 
         btn25.setEditable(false);
-        btn25.setBackground(new java.awt.Color(75, 29, 63));
+        btn25.setBackground(new java.awt.Color(255, 0, 0));
         btn25.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 153, 153), new java.awt.Color(51, 255, 204)));
         btn25.setFont(new java.awt.Font("Roboto", 0, 36)); // NOI18N
         btn25.setForeground(new java.awt.Color(255, 255, 255));
@@ -258,6 +258,8 @@ public class calcForm extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(51, 0, 51));
 
+        jLabel1.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Alguna anotacion por aqui :)");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
