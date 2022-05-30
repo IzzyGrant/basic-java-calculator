@@ -72,6 +72,7 @@ public class calcForm extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, new java.awt.Color(23, 190, 187)));
         jPanel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
+        jTextPane1.setEditable(false);
         jTextPane1.setBackground(new java.awt.Color(0, 102, 102));
         jTextPane1.setFont(new java.awt.Font("Roboto", 1, 36)); // NOI18N
         jTextPane1.setForeground(new java.awt.Color(0, 255, 0));
@@ -144,6 +145,11 @@ public class calcForm extends javax.swing.JFrame {
         btn15.setToolTipText("");
         btn15.setFocusable(false);
         btn15.setName(""); // NOI18N
+        btn15.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn15MouseClicked(evt);
+            }
+        });
         jScrollPane8.setViewportView(btn15);
 
         btn16.setEditable(false);
@@ -368,15 +374,24 @@ public class calcForm extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btn15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn15MouseClicked
+        // TODO add your handling code here:
+        
+
+            jTextPane1.setText(String.valueOf("1"));
+        
+        
+    }//GEN-LAST:event_btn15MouseClicked
 
     /**
      * @param args the command line arguments
