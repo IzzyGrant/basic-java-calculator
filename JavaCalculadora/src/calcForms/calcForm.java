@@ -249,6 +249,11 @@ public class calcForm extends javax.swing.JFrame {
         btn24.setToolTipText("");
         btn24.setFocusable(false);
         btn24.setName(""); // NOI18N
+        btn24.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn24MouseClicked(evt);
+            }
+        });
         jScrollPane17.setViewportView(btn24);
 
         btn25.setEditable(false);
@@ -260,6 +265,11 @@ public class calcForm extends javax.swing.JFrame {
         btn25.setToolTipText("");
         btn25.setFocusable(false);
         btn25.setName(""); // NOI18N
+        btn25.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn25MouseClicked(evt);
+            }
+        });
         jScrollPane18.setViewportView(btn25);
 
         jPanel2.setBackground(new java.awt.Color(51, 0, 51));
@@ -386,12 +396,18 @@ public class calcForm extends javax.swing.JFrame {
 
     private void btn15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn15MouseClicked
         // TODO add your handling code here:
-        
-
-            jTextPane1.setText(String.valueOf("1"));
-        
-        
+        jTextPane1.setText(String.valueOf("1"));
     }//GEN-LAST:event_btn15MouseClicked
+
+    private void btn24MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn24MouseClicked
+        // TODO add your handling code here:
+        jTextPane1.setText(String.valueOf("0"));
+    }//GEN-LAST:event_btn24MouseClicked
+
+    private void btn25MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn25MouseClicked
+        // TODO add your handling code here:
+        jTextPane1.setText(String.valueOf(""));
+    }//GEN-LAST:event_btn25MouseClicked
 
     /**
      * @param args the command line arguments
