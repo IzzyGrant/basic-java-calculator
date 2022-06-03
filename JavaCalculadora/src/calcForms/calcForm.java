@@ -406,7 +406,7 @@ public class calcForm extends javax.swing.JFrame {
 
     private void btn25MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn25MouseClicked
         // TODO add your handling code here:
-        jTextPane1.setText(String.valueOf(""));
+        jTextPane1.setText(String.valueOf("0"));
     }//GEN-LAST:event_btn25MouseClicked
 
     /**
