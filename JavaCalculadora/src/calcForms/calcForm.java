@@ -185,8 +185,7 @@ public class calcForm extends javax.swing.JFrame {
         btn18.setName(""); // NOI18N
         jScrollPane11.setViewportView(btn18);
 
-        btn19.setEditable(false);
-        btn19.setBackground(new java.awt.Color(0, 204, 0));
+        btn19.setBackground(new java.awt.Color(51, 255, 51));
         btn19.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 153, 153), new java.awt.Color(51, 255, 204)));
         btn19.setFont(new java.awt.Font("Roboto", 0, 36)); // NOI18N
         btn19.setForeground(new java.awt.Color(255, 255, 255));
