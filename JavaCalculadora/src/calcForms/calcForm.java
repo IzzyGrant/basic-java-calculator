@@ -275,7 +275,7 @@ public class calcForm extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Alguna anotacion por aqui :)");
+        jLabel1.setText("Izzy");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
