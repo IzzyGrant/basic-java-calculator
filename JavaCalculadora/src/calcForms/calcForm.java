@@ -69,7 +69,7 @@ public class calcForm extends javax.swing.JFrame {
         jLabel3.setText("C");
         jLabel3.setOpaque(true);
 
-        jLabel5.setBackground(new java.awt.Color(0, 51, 102));
+        jLabel5.setBackground(new java.awt.Color(43, 0, 0));
         jLabel5.setFont(new java.awt.Font("Roboto Black", 0, 24)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
