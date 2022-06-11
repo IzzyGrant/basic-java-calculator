@@ -59,7 +59,7 @@ public class calcForm extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Roboto Black", 0, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("0");
+        jLabel2.setText("7");
         jLabel2.setOpaque(true);
 
         jLabel3.setBackground(new java.awt.Color(0, 51, 102));
@@ -80,56 +80,56 @@ public class calcForm extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Roboto Black", 0, 24)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("0");
+        jLabel4.setText("8");
         jLabel4.setOpaque(true);
 
         jLabel6.setBackground(new java.awt.Color(11, 11, 11));
         jLabel6.setFont(new java.awt.Font("Roboto Black", 0, 24)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setText("0");
+        jLabel6.setText("9");
         jLabel6.setOpaque(true);
 
         jLabel7.setBackground(new java.awt.Color(11, 11, 11));
         jLabel7.setFont(new java.awt.Font("Roboto Black", 0, 24)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setText("0");
+        jLabel7.setText("4");
         jLabel7.setOpaque(true);
 
         jLabel8.setBackground(new java.awt.Color(11, 11, 11));
         jLabel8.setFont(new java.awt.Font("Roboto Black", 0, 24)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel8.setText("0");
+        jLabel8.setText("5");
         jLabel8.setOpaque(true);
 
         jLabel9.setBackground(new java.awt.Color(11, 11, 11));
         jLabel9.setFont(new java.awt.Font("Roboto Black", 0, 24)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel9.setText("0");
+        jLabel9.setText("6");
         jLabel9.setOpaque(true);
 
         jLabel10.setBackground(new java.awt.Color(11, 11, 11));
         jLabel10.setFont(new java.awt.Font("Roboto Black", 0, 24)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel10.setText("0");
+        jLabel10.setText("1");
         jLabel10.setOpaque(true);
 
         jLabel11.setBackground(new java.awt.Color(11, 11, 11));
         jLabel11.setFont(new java.awt.Font("Roboto Black", 0, 24)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel11.setText("0");
+        jLabel11.setText("2");
         jLabel11.setOpaque(true);
 
         jLabel12.setBackground(new java.awt.Color(11, 11, 11));
         jLabel12.setFont(new java.awt.Font("Roboto Black", 0, 24)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel12.setText("0");
+        jLabel12.setText("3");
         jLabel12.setOpaque(true);
 
         jLabel13.setBackground(new java.awt.Color(11, 11, 11));
