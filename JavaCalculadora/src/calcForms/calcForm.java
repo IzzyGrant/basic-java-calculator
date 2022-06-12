@@ -43,7 +43,7 @@ public class calcForm extends javax.swing.JFrame {
         jLabel20 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Calculadora");
+        setTitle("Calculadora de Izzy");
         setAutoRequestFocus(false);
         setBackground(new java.awt.Color(0, 0, 0));
         setResizable(false);
@@ -164,6 +164,14 @@ public class calcForm extends javax.swing.JFrame {
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel14.setText(".");
         jLabel14.setOpaque(true);
+        jLabel14.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel14MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel14MouseExited(evt);
+            }
+        });
 
         jLabel16.setBackground(new java.awt.Color(0, 51, 102));
         jLabel16.setFont(new java.awt.Font("Roboto Black", 0, 24)); // NOI18N
@@ -413,6 +421,14 @@ public class calcForm extends javax.swing.JFrame {
     private void jLabel20MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel20MouseExited
         jLabel20.setBackground(new java.awt.Color(0, 51, 102));
     }//GEN-LAST:event_jLabel20MouseExited
+
+    private void jLabel14MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseEntered
+        jLabel14.setBackground(new java.awt.Color(0, 0, 0));
+    }//GEN-LAST:event_jLabel14MouseEntered
+
+    private void jLabel14MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseExited
+        jLabel14.setBackground(new java.awt.Color(11, 11, 11));
+    }//GEN-LAST:event_jLabel14MouseExited
 
 
     public static void main(String args[]) {
