@@ -1,17 +1,13 @@
 
 package calcForms;
-import java.awt.geom.RoundRectangle2D;
 
 /**
  *
  * @author Izzy G. Osorio : nikaylez@gmail.com
  */
-
-
 public class calcForm extends javax.swing.JFrame {
 
 
-    
     public calcForm() {
         initComponents();
     }
@@ -157,6 +153,14 @@ public class calcForm extends javax.swing.JFrame {
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel13.setText("0");
         jLabel13.setOpaque(true);
+        jLabel13.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel13MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel13MouseExited(evt);
+            }
+        });
 
         jLabel14.setBackground(new java.awt.Color(11, 11, 11));
         jLabel14.setFont(new java.awt.Font("Roboto Black", 0, 24)); // NOI18N
@@ -429,6 +433,14 @@ public class calcForm extends javax.swing.JFrame {
     private void jLabel14MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseExited
         jLabel14.setBackground(new java.awt.Color(11, 11, 11));
     }//GEN-LAST:event_jLabel14MouseExited
+
+    private void jLabel13MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MouseEntered
+        jLabel13.setBackground(new java.awt.Color(0, 0, 0));
+    }//GEN-LAST:event_jLabel13MouseEntered
+
+    private void jLabel13MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MouseExited
+        jLabel13.setBackground(new java.awt.Color(11, 11, 11));
+    }//GEN-LAST:event_jLabel13MouseExited
 
 
     public static void main(String args[]) {
