@@ -7,6 +7,7 @@ package calcForms;
  */
 public class calcForm extends javax.swing.JFrame {
 
+    String displaytxt = "123+-*/6.7"; 
 
     public calcForm() {
         initComponents();
@@ -50,7 +51,7 @@ public class calcForm extends javax.swing.JFrame {
         display.setFont(new java.awt.Font("Roboto Thin", 1, 48)); // NOI18N
         display.setForeground(new java.awt.Color(255, 255, 255));
         display.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        display.setText("0");
+        display.setText(displaytxt);
 
         jPanel1.setBackground(new java.awt.Color(31, 31, 31));
 
@@ -91,6 +92,9 @@ public class calcForm extends javax.swing.JFrame {
         jLabel5.setText("AC");
         jLabel5.setOpaque(true);
         jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5MouseClicked(evt);
+            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel5MouseExited(evt);
             }
@@ -181,6 +185,9 @@ public class calcForm extends javax.swing.JFrame {
         jLabel10.setText("1");
         jLabel10.setOpaque(true);
         jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel10MouseClicked(evt);
+            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel10MouseExited(evt);
             }
@@ -585,6 +592,16 @@ public class calcForm extends javax.swing.JFrame {
     private void jLabel6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseExited
         jLabel6.setBackground(new java.awt.Color(11, 11, 11));
     }//GEN-LAST:event_jLabel6MouseExited
+
+    private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
+        
+    }//GEN-LAST:event_jLabel10MouseClicked
+
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+        // TODO add your handling code here:
+        displaytxt = "0";
+        display.setText(displaytxt);
+    }//GEN-LAST:event_jLabel5MouseClicked
 
 
     public static void main(String args[]) {
