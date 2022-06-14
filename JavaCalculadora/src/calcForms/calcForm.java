@@ -251,11 +251,14 @@ public class calcForm extends javax.swing.JFrame {
         jLabel14.setText(".");
         jLabel14.setOpaque(true);
         jLabel14.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel14MouseEntered(evt);
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel14MouseClicked(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel14MouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel14MouseEntered(evt);
             }
         });
 
@@ -632,6 +635,16 @@ public class calcForm extends javax.swing.JFrame {
         } else { displaytxt = displaytxt + suma;}
         display.setText(displaytxt);
     }//GEN-LAST:event_jLabel19MouseClicked
+
+    private void jLabel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseClicked
+        char punto = '.';
+        
+        if (displaytxt == "0"){ 
+        displaytxt = "";
+        displaytxt = displaytxt + punto;
+        } else { displaytxt = displaytxt + punto;}
+        display.setText(displaytxt);
+    }//GEN-LAST:event_jLabel14MouseClicked
 
 
     public static void main(String args[]) {
