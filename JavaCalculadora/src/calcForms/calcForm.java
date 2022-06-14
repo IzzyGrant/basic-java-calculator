@@ -120,6 +120,14 @@ public class calcForm extends javax.swing.JFrame {
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("9");
         jLabel6.setOpaque(true);
+        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel6MouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel6MouseEntered(evt);
+            }
+        });
 
         jLabel7.setBackground(new java.awt.Color(11, 11, 11));
         jLabel7.setFont(new java.awt.Font("Roboto Medium", 0, 24)); // NOI18N
@@ -569,6 +577,14 @@ public class calcForm extends javax.swing.JFrame {
     private void jLabel4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseExited
         jLabel4.setBackground(new java.awt.Color(11, 11, 11));
     }//GEN-LAST:event_jLabel4MouseExited
+
+    private void jLabel6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseEntered
+        jLabel6.setBackground(new java.awt.Color(0, 0, 0));
+    }//GEN-LAST:event_jLabel6MouseEntered
+
+    private void jLabel6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseExited
+        jLabel6.setBackground(new java.awt.Color(11, 11, 11));
+    }//GEN-LAST:event_jLabel6MouseExited
 
 
     public static void main(String args[]) {
