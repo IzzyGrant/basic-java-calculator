@@ -60,6 +60,11 @@ public class calcForm extends javax.swing.JFrame {
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("7");
         jLabel2.setOpaque(true);
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel2MouseEntered(evt);
+            }
+        });
 
         jLabel3.setBackground(new java.awt.Color(0, 51, 102));
         jLabel3.setFont(new java.awt.Font("Roboto Black", 0, 24)); // NOI18N
@@ -537,6 +542,10 @@ public class calcForm extends javax.swing.JFrame {
     private void jLabel9MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseExited
         jLabel19.setBackground(new java.awt.Color(11, 11, 11));
     }//GEN-LAST:event_jLabel9MouseExited
+
+    private void jLabel2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel2MouseEntered
 
 
     public static void main(String args[]) {
