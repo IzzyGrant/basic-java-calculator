@@ -76,11 +76,11 @@ public class calcForm extends javax.swing.JFrame {
         jLabel3.setText("C");
         jLabel3.setOpaque(true);
         jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel3MouseEntered(evt);
-            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel3MouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel3MouseEntered(evt);
             }
         });
 
@@ -91,11 +91,11 @@ public class calcForm extends javax.swing.JFrame {
         jLabel5.setText("AC");
         jLabel5.setOpaque(true);
         jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel5MouseEntered(evt);
-            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel5MouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel5MouseEntered(evt);
             }
         });
 
@@ -105,6 +105,14 @@ public class calcForm extends javax.swing.JFrame {
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("8");
         jLabel4.setOpaque(true);
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel4MouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel4MouseEntered(evt);
+            }
+        });
 
         jLabel6.setBackground(new java.awt.Color(11, 11, 11));
         jLabel6.setFont(new java.awt.Font("Roboto Medium", 0, 24)); // NOI18N
@@ -165,11 +173,11 @@ public class calcForm extends javax.swing.JFrame {
         jLabel10.setText("1");
         jLabel10.setOpaque(true);
         jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel10MouseEntered(evt);
-            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel10MouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel10MouseEntered(evt);
             }
         });
 
@@ -240,11 +248,11 @@ public class calcForm extends javax.swing.JFrame {
         jLabel16.setText("/");
         jLabel16.setOpaque(true);
         jLabel16.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel16MouseEntered(evt);
-            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel16MouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel16MouseEntered(evt);
             }
         });
 
@@ -255,11 +263,11 @@ public class calcForm extends javax.swing.JFrame {
         jLabel17.setText("*");
         jLabel17.setOpaque(true);
         jLabel17.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel17MouseEntered(evt);
-            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel17MouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel17MouseEntered(evt);
             }
         });
 
@@ -553,6 +561,14 @@ public class calcForm extends javax.swing.JFrame {
     private void jLabel2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseExited
         jLabel2.setBackground(new java.awt.Color(11, 11, 11));
     }//GEN-LAST:event_jLabel2MouseExited
+
+    private void jLabel4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseEntered
+        jLabel4.setBackground(new java.awt.Color(0, 0, 0));
+    }//GEN-LAST:event_jLabel4MouseEntered
+
+    private void jLabel4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseExited
+        jLabel4.setBackground(new java.awt.Color(11, 11, 11));
+    }//GEN-LAST:event_jLabel4MouseExited
 
 
     public static void main(String args[]) {
