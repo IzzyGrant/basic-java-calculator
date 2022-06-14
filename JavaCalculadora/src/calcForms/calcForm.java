@@ -61,6 +61,9 @@ public class calcForm extends javax.swing.JFrame {
         jLabel2.setText("7");
         jLabel2.setOpaque(true);
         jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel2MouseExited(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jLabel2MouseEntered(evt);
             }
@@ -544,8 +547,12 @@ public class calcForm extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel9MouseExited
 
     private void jLabel2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseEntered
-        // TODO add your handling code here:
+        jLabel20.setBackground(new java.awt.Color(0, 0, 0));
     }//GEN-LAST:event_jLabel2MouseEntered
+
+    private void jLabel2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseExited
+        jLabel20.setBackground(new java.awt.Color(11, 11, 11));
+    }//GEN-LAST:event_jLabel2MouseExited
 
 
     public static void main(String args[]) {
