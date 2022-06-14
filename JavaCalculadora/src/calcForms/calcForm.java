@@ -111,6 +111,14 @@ public class calcForm extends javax.swing.JFrame {
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("4");
         jLabel7.setOpaque(true);
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel7MouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel7MouseEntered(evt);
+            }
+        });
 
         jLabel8.setBackground(new java.awt.Color(11, 11, 11));
         jLabel8.setFont(new java.awt.Font("Roboto Medium", 0, 24)); // NOI18N
@@ -118,6 +126,14 @@ public class calcForm extends javax.swing.JFrame {
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("5");
         jLabel8.setOpaque(true);
+        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel8MouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel8MouseEntered(evt);
+            }
+        });
 
         jLabel9.setBackground(new java.awt.Color(11, 11, 11));
         jLabel9.setFont(new java.awt.Font("Roboto Medium", 0, 24)); // NOI18N
@@ -125,6 +141,14 @@ public class calcForm extends javax.swing.JFrame {
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("6");
         jLabel9.setOpaque(true);
+        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel9MouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel9MouseEntered(evt);
+            }
+        });
 
         jLabel10.setBackground(new java.awt.Color(11, 11, 11));
         jLabel10.setFont(new java.awt.Font("Roboto Medium", 0, 24)); // NOI18N
@@ -163,6 +187,9 @@ public class calcForm extends javax.swing.JFrame {
         jLabel12.setText("3");
         jLabel12.setOpaque(true);
         jLabel12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel12MouseExited(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jLabel12MouseEntered(evt);
             }
@@ -480,8 +507,36 @@ public class calcForm extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel11MouseExited
 
     private void jLabel12MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseEntered
-        // TODO add your handling code here:
+        jLabel12.setBackground(new java.awt.Color(0, 0, 0));
     }//GEN-LAST:event_jLabel12MouseEntered
+
+    private void jLabel12MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseExited
+        jLabel12.setBackground(new java.awt.Color(11, 11, 11));
+    }//GEN-LAST:event_jLabel12MouseExited
+
+    private void jLabel7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseEntered
+        jLabel17.setBackground(new java.awt.Color(0, 0, 0));
+    }//GEN-LAST:event_jLabel7MouseEntered
+
+    private void jLabel7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseExited
+        jLabel17.setBackground(new java.awt.Color(11, 11, 11));
+    }//GEN-LAST:event_jLabel7MouseExited
+
+    private void jLabel8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseEntered
+        jLabel18.setBackground(new java.awt.Color(0, 0, 0));
+    }//GEN-LAST:event_jLabel8MouseEntered
+
+    private void jLabel8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseExited
+        jLabel18.setBackground(new java.awt.Color(11, 11, 11));
+    }//GEN-LAST:event_jLabel8MouseExited
+
+    private void jLabel9MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseEntered
+        jLabel19.setBackground(new java.awt.Color(0, 0, 0));
+    }//GEN-LAST:event_jLabel9MouseEntered
+
+    private void jLabel9MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseExited
+        jLabel19.setBackground(new java.awt.Color(11, 11, 11));
+    }//GEN-LAST:event_jLabel9MouseExited
 
 
     public static void main(String args[]) {
