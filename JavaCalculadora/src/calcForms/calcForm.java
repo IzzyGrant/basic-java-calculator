@@ -203,6 +203,9 @@ public class calcForm extends javax.swing.JFrame {
         jLabel11.setText("2");
         jLabel11.setOpaque(true);
         jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel11MouseClicked(evt);
+            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel11MouseExited(evt);
             }
@@ -308,11 +311,14 @@ public class calcForm extends javax.swing.JFrame {
         jLabel19.setText("+");
         jLabel19.setOpaque(true);
         jLabel19.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel19MouseEntered(evt);
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel19MouseClicked(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel19MouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel19MouseEntered(evt);
             }
         });
 
@@ -594,14 +600,38 @@ public class calcForm extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel6MouseExited
 
     private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
+        char uno = '1';
         
+        if (displaytxt == "0"){ 
+        displaytxt = "";
+        displaytxt = displaytxt + uno;
+        } else { displaytxt = displaytxt + uno;}
+        display.setText(displaytxt);
     }//GEN-LAST:event_jLabel10MouseClicked
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
-        // TODO add your handling code here:
+
         displaytxt = "0";
         display.setText(displaytxt);
     }//GEN-LAST:event_jLabel5MouseClicked
+
+    private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
+        char dos = '2';
+        
+        if (displaytxt == "0"){ 
+        displaytxt = "";
+        displaytxt = displaytxt + dos;
+        } else { displaytxt = displaytxt + dos;}
+        display.setText(displaytxt);
+    }//GEN-LAST:event_jLabel11MouseClicked
+
+    private void jLabel19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel19MouseClicked
+        char suma = '+';
+        
+        if (displaytxt == "0"){ 
+        } else { displaytxt = displaytxt + suma;}
+        display.setText(displaytxt);
+    }//GEN-LAST:event_jLabel19MouseClicked
 
 
     public static void main(String args[]) {
