@@ -79,7 +79,7 @@
               data-bs-parent="#accordionFlushExample">
               <div class="accordion-body">
                 <ul class="list-group">
-                 <!-- <li class="list-group-item list-group-item-success"><i class="fa fa-check-square"></i> Uso de
+                  <!-- <li class="list-group-item list-group-item-success"><i class="fa fa-check-square"></i> Uso de
                     variables</li> -->
                   <li class="list-group-item list-group-item-light"><i class="fa fa-square-o"></i> Uso de
                     variables</li>
@@ -105,6 +105,65 @@
 
 
       <div class="col-sm-8">
+
+        <article>
+          <h2><i class="fa fa-newspaper-o"></i> Diseño de funcionamiento</h2>
+          <h5><i class="fa fa-clock-o"></i> Junio 14, 2022</h5>
+          <div class="fakeimg" style="display:flex; justify-content: center;"><img
+              src="https://github.com/IzzyGrant/basic-java-calculator/blob/main/calc1.jpg?raw=false"
+              alt="duke, mascota de java" srcset=""></div>
+          <br>
+          <p style="text-indent: 10px ;"> Una vez ideado un diseño exterior ahora comenzaria la parte laboriosa, la del
+            funcionamiento de la calculadora. Para esta etapa hay una variedad de formas para hacerlo y voy a usar la
+            primera que se nos ha cruzado por el camino y es usando <code>Regex</code>. En Java las expresiones
+            regulares(Regex) se consideran de intermedio a avanzado por lo cual se recomienda un analisis un poco
+            profundo pero con la ventaja de reduccion de codigo para hacere las mismas acciones. De manera breve este
+            metodo <STRong> traduce el input de un <code>String</code> con contenido matematico a una operacion
+              estructurada y evaluable</STRong>. Aqui hay 2 palabras clave para entender este metodo; <code>Parse</code>
+            y <code>Regex</code>.
+          </p>
+          <br>
+          <p style="text-indent: 10px ;"> En este caso estoy buscando ayuda en StackOverflow primeramente para usar este
+            metodo y añadir los inputs en un String. Afortunadamente alguien con anterioridad ha hecho la pregunta que
+            pretendia hacer y la han respondido de una manera excelente :) <a
+              href="https://stackoverflow.com/questions/27808112/java-splitting-with-math-expression">Aqui mismo</a> lo
+            cual me ha quedado claro para hacer la suma de dos numeros haciendo <code>split</code> y <code>parse</code>
+            quedando asi :
+          </p>
+
+          <div class="container p-2 my-5 border bg-dark">
+            <code style="font-size: 18px ;">
+              <pre>
+
+                import java.util.Arrays; // libreria de arreglos
+
+                public class Main {
+    
+                  public static void main(String[] args) {
+                      
+                      String number = "100+500"; // input de String
+                      String[] split = number.split("(?<=[\\d.])(?=[^\\d.])|(?<=[^\\d.])(?=[\\d.])");
+                      // operacion de split
+                      int a = Integer.parseInt(split[0]); // usando variables de texto
+                      int b = Integer.parseInt(split[2]); // traduciendo de String a int
+                      int res = a+b; // operando los 2 valores obtenidos del arreglo
+                      System.out.println(Arrays.toString(split) + "contenido: " + res); // display output
+                  }
+              }
+              
+          </pre>                             
+            </code>
+          </div>
+
+          <p style="text-indent: 10px ;"> El reto de este metodo es entender
+            <code>split("(?<=[\\d.])(?=[^\\d.])|(?<=[^\\d.])(?=[\\d.])");</code> para "administrar" el contenido del
+            String para que sea operable y este dentro de un Array. Nos han dejado <a
+              href="https://docs.oracle.com/javase/tutorial/essential/regex/">este</a> enlace para adentrarse en el tema
+            pero hay mucho mas en la red :)
+          </p>
+
+        </article>
+
         <article>
           <h2><i class="fa fa-newspaper-o"></i> Diseño Previo</h2>
           <h5><i class="fa fa-clock-o"></i> Junio 12, 2022</h5>
@@ -135,8 +194,8 @@
             </code>
           </div>
 
-          <p style="text-indent: 10px ;">De esta forma se le puede dar mas vida e identidad al programa en cuanto a diseño.</p>
-
+          <p style="text-indent: 10px ;">De esta forma se le puede dar mas vida e identidad al programa en cuanto a
+            diseño.</p>
 
         </article>
 
