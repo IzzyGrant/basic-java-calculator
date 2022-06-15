@@ -444,6 +444,7 @@ public class calcForm extends javax.swing.JFrame {
                 .addContainerGap(30, Short.MAX_VALUE))
         );
 
+        jLabel1.setFont(new java.awt.Font("sansserif", 1, 13)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 153, 153));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel1.setText("0");
@@ -677,7 +678,7 @@ public class calcForm extends javax.swing.JFrame {
 
     private void jLabel20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel20MouseClicked
         // tecla resultado
-        DecimalFormat format = new DecimalFormat("0.#####"); // mostrara dos lugares de decimales
+        DecimalFormat format = new DecimalFormat("0.###"); // mostrara dos lugares de decimales
         double resultado = func.oper(displaytxt); // uso de case y metodo para operacion
         display.setText(format.format(resultado)); // muestra el resultado final
         jLabel1.setText(displaytxt + " =");
