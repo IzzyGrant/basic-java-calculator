@@ -7,7 +7,7 @@ package calcForms;
  */
 public class calcForm extends javax.swing.JFrame {
 
-    String displaytxt = "123+-*/6.7"; 
+    String displaytxt = "hola"; 
 
     public calcForm() {
         initComponents();
