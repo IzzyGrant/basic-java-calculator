@@ -65,7 +65,7 @@ public class calcForm extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(51, 51, 51));
 
         display.setBackground(new java.awt.Color(0, 102, 102));
-        display.setFont(new java.awt.Font("Roboto Thin", 1, 48)); // NOI18N
+        display.setFont(new java.awt.Font("Roboto Thin", 0, 48)); // NOI18N
         display.setForeground(new java.awt.Color(255, 255, 255));
         display.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         display.setText(displaytxt);
@@ -444,7 +444,7 @@ public class calcForm extends javax.swing.JFrame {
                 .addContainerGap(30, Short.MAX_VALUE))
         );
 
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setForeground(new java.awt.Color(0, 153, 153));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel1.setText("0");
 
@@ -680,7 +680,7 @@ public class calcForm extends javax.swing.JFrame {
         DecimalFormat format = new DecimalFormat("0.#####"); // mostrara dos lugares de decimales
         double resultado = func.oper(displaytxt); // uso de case y metodo para operacion
         display.setText(format.format(resultado)); // muestra el resultado final
-        jLabel1.setText(displaytxt + "=");
+        jLabel1.setText(displaytxt + " =");
         displaytxt = String.valueOf(resultado);
     }//GEN-LAST:event_jLabel20MouseClicked
 
