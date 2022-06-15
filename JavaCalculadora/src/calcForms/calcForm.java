@@ -603,8 +603,8 @@ public class calcForm extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel6MouseExited
 
     private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
+        // tecla 1
         char uno = '1';
-        
         if (displaytxt == "0"){ 
         displaytxt = "";
         displaytxt = displaytxt + uno;
@@ -613,14 +613,14 @@ public class calcForm extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel10MouseClicked
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
-
+        // tecla AC 
         displaytxt = "0";
         display.setText(displaytxt);
     }//GEN-LAST:event_jLabel5MouseClicked
 
     private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
+        // tecla 2
         char dos = '2';
-        
         if (displaytxt == "0"){ 
         displaytxt = "";
         displaytxt = displaytxt + dos;
@@ -629,16 +629,16 @@ public class calcForm extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel11MouseClicked
 
     private void jLabel19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel19MouseClicked
+        // tecla +
         char suma = '+';
-        
         if (displaytxt == "0"){ 
         } else { displaytxt = displaytxt + suma;}
         display.setText(displaytxt);
     }//GEN-LAST:event_jLabel19MouseClicked
 
     private void jLabel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseClicked
+        // tecla .
         char punto = '.';
-        
         if (displaytxt == "0"){ 
         displaytxt = "";
         displaytxt = displaytxt + punto;
