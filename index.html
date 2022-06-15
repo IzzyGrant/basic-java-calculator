@@ -109,9 +109,7 @@
         <article>
           <h2><i class="fa fa-newspaper-o"></i> Diseño de funcionamiento</h2>
           <h5><i class="fa fa-clock-o"></i> Junio 14, 2022</h5>
-          <div class="fakeimg" style="display:flex; justify-content: center;"><img
-              src="https://github.com/IzzyGrant/basic-java-calculator/blob/main/calc1.jpg?raw=false"
-              alt="duke, mascota de java" srcset=""></div>
+          <div class="fakeimg" style="display:flex; justify-content: center;"></div>
           <br>
           <p style="text-indent: 10px ;"> Una vez ideado un diseño exterior ahora comenzaria la parte laboriosa, la del
             funcionamiento de la calculadora. Para esta etapa hay una variedad de formas para hacerlo y voy a usar la
@@ -135,21 +133,21 @@
             <code style="font-size: 18px ;">
               <pre>
 
-                import java.util.Arrays; // libreria de arreglos
+    import java.util.Arrays; // libreria de arreglos
 
-                public class Main {
-    
-                  public static void main(String[] args) {
-                      
-                      String number = "100+500"; // input de String
-                      String[] split = number.split("(?<=[\\d.])(?=[^\\d.])|(?<=[^\\d.])(?=[\\d.])");
-                      // operacion de split
-                      int a = Integer.parseInt(split[0]); // usando variables de texto
-                      int b = Integer.parseInt(split[2]); // traduciendo de String a int
-                      int res = a+b; // operando los 2 valores obtenidos del arreglo
-                      System.out.println(Arrays.toString(split) + "contenido: " + res); // display output
-                  }
-              }
+    public class Main {
+
+      public static void main(String[] args) {
+          
+          String number = "100+500"; // input de String
+          String[] split = number.split("(?<=[\\d.])(?=[^\\d.])|(?<=[^\\d.])(?=[\\d.])");
+          // operacion de split
+          int a = Integer.parseInt(split[0]); // usando variables de texto
+          int b = Integer.parseInt(split[2]); // traduciendo de String a int
+          int res = a+b; // operando los 2 valores obtenidos del arreglo
+          System.out.println(Arrays.toString(split) + "contenido: " + res); // display output
+      }
+  }
               
           </pre>                             
             </code>
@@ -164,7 +162,9 @@
 
         </article>
 
-        <article>
+        <hr>
+
+        <article class="container reveal">
           <h2><i class="fa fa-newspaper-o"></i> Diseño Previo</h2>
           <h5><i class="fa fa-clock-o"></i> Junio 12, 2022</h5>
           <div class="fakeimg" style="display:flex; justify-content: center;"><img
