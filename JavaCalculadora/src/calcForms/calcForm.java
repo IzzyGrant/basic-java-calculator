@@ -1,14 +1,30 @@
 
 package calcForms;
-
+import java.text.DecimalFormat;
+import java.util.Arrays; // libreria de arreglos
 /**
  *
  * @author Izzy G. Osorio : nikaylez@gmail.com
  */
 public class calcForm extends javax.swing.JFrame {
 
-    String displaytxt = "hola"; 
+    String displaytxt = "0"; 
 
+    
+    static class func{ // Funcion experimental
+         static public double oper(String cadena){
+          String[] split = cadena.split("(?<=[\\d.])(?=[^\\d.])|(?<=[^\\d.])(?=[\\d.])");
+          // operacion de split
+          double a = Double.parseDouble(split[0]); // usando variables de texto
+          double b = Double.parseDouble(split[2]); // traduciendo de String a int
+          double res = a+b; // operando los 2 valores obtenidos del arreglo
+          System.out.println(Arrays.toString(split) + "resultado: " + res); // display output
+          
+          return res;
+        }
+    }
+    
+    
     public calcForm() {
         initComponents();
     }
@@ -38,6 +54,7 @@ public class calcForm extends javax.swing.JFrame {
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Calculadora de Izzy");
@@ -325,18 +342,21 @@ public class calcForm extends javax.swing.JFrame {
             }
         });
 
-        jLabel20.setBackground(new java.awt.Color(0, 51, 102));
+        jLabel20.setBackground(new java.awt.Color(0, 106, 102));
         jLabel20.setFont(new java.awt.Font("Roboto Black", 0, 24)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(255, 255, 255));
         jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel20.setText("=");
         jLabel20.setOpaque(true);
         jLabel20.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel20MouseEntered(evt);
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel20MouseClicked(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel20MouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel20MouseEntered(evt);
             }
         });
 
@@ -424,6 +444,10 @@ public class calcForm extends javax.swing.JFrame {
                 .addContainerGap(30, Short.MAX_VALUE))
         );
 
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel1.setText("0");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -431,13 +455,17 @@ public class calcForm extends javax.swing.JFrame {
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(display, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(display, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(33, 33, 33)
+                .addGap(10, 10, 10)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(display)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -507,11 +535,11 @@ public class calcForm extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel19MouseExited
 
     private void jLabel20MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel20MouseEntered
-        jLabel20.setBackground(new java.awt.Color(0, 51, 152));
+        jLabel20.setBackground(new java.awt.Color(0, 156, 152)); //0,106,102
     }//GEN-LAST:event_jLabel20MouseEntered
 
     private void jLabel20MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel20MouseExited
-        jLabel20.setBackground(new java.awt.Color(0, 51, 102));
+        jLabel20.setBackground(new java.awt.Color(0, 106, 102));
     }//GEN-LAST:event_jLabel20MouseExited
 
     private void jLabel14MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseEntered
@@ -616,6 +644,7 @@ public class calcForm extends javax.swing.JFrame {
         // tecla AC 
         displaytxt = "0";
         display.setText(displaytxt);
+        jLabel1.setText("0");
     }//GEN-LAST:event_jLabel5MouseClicked
 
     private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
@@ -645,6 +674,15 @@ public class calcForm extends javax.swing.JFrame {
         } else { displaytxt = displaytxt + punto;}
         display.setText(displaytxt);
     }//GEN-LAST:event_jLabel14MouseClicked
+
+    private void jLabel20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel20MouseClicked
+        // tecla resultado
+        DecimalFormat format = new DecimalFormat("0.#####"); // mostrara dos lugares de decimales
+        double resultado = func.oper(displaytxt); // uso de case y metodo para operacion
+        display.setText(format.format(resultado)); // muestra el resultado final
+        jLabel1.setText(displaytxt + "=");
+        displaytxt = String.valueOf(resultado);
+    }//GEN-LAST:event_jLabel20MouseClicked
 
 
     public static void main(String args[]) {
@@ -681,6 +719,7 @@ public class calcForm extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel display;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
