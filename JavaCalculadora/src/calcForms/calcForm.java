@@ -9,6 +9,7 @@ import java.util.Arrays; // libreria de arreglos
 public class calcForm extends javax.swing.JFrame {
 
     String displaytxt = "0"; 
+    boolean ifOperador, ifDot = false;
 
     
     static class func{ // Funcion experimental
@@ -638,6 +639,7 @@ public class calcForm extends javax.swing.JFrame {
         displaytxt = "";
         displaytxt = displaytxt + uno;
         } else { displaytxt = displaytxt + uno;}
+        ifOperador = false;
         display.setText(displaytxt);
     }//GEN-LAST:event_jLabel10MouseClicked
 
@@ -655,15 +657,20 @@ public class calcForm extends javax.swing.JFrame {
         displaytxt = "";
         displaytxt = displaytxt + dos;
         } else { displaytxt = displaytxt + dos;}
+        ifOperador = false;
         display.setText(displaytxt);
     }//GEN-LAST:event_jLabel11MouseClicked
 
     private void jLabel19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel19MouseClicked
         // tecla +
         char suma = '+';
-        if (displaytxt == "0"){ 
-        } else { displaytxt = displaytxt + suma;}
-        display.setText(displaytxt);
+        if(ifOperador == false){
+            if (displaytxt == "0"){ 
+            } else { displaytxt = displaytxt + suma;}
+            display.setText(displaytxt);
+            ifOperador = true;
+        }
+
     }//GEN-LAST:event_jLabel19MouseClicked
 
     private void jLabel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseClicked
