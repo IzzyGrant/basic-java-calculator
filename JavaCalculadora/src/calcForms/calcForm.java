@@ -10,7 +10,6 @@ public class calcForm extends javax.swing.JFrame {
 
     static String displaytxt = "0"; 
     static boolean ifOperador, ifDot, turn = false;
-
     
     static class func{ // Funcion experimental
          static public double oper(String cadena){
