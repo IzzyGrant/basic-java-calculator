@@ -674,9 +674,8 @@ public class calcForm extends javax.swing.JFrame {
         DecimalFormat format = new DecimalFormat("0.###"); // mostrara tres lugares de decimales
         double resultado = func.oper(displaytxt); // uso de case y metodo para operacion
         jLabel1.setText(displaytxt + " =");
-        displaytxt = String.valueOf(format.format(resultado));
+        displaytxt = String.valueOf(format.format(resultado) + "+");
         display.setText(displaytxt); // muestra el resultado final
-        ifOperador = false;
         }
 
     }//GEN-LAST:event_jLabel19MouseClicked
