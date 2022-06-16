@@ -639,7 +639,7 @@ public class calcForm extends javax.swing.JFrame {
         displaytxt = "";
         displaytxt = displaytxt + uno;
         } else { displaytxt = displaytxt + uno;}
-        ifOperador = false;
+        //ifOperador = false;
         display.setText(displaytxt);
     }//GEN-LAST:event_jLabel10MouseClicked
 
@@ -648,6 +648,7 @@ public class calcForm extends javax.swing.JFrame {
         displaytxt = "0";
         display.setText(displaytxt);
         jLabel1.setText("0");
+        ifOperador = false;
     }//GEN-LAST:event_jLabel5MouseClicked
 
     private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
@@ -657,7 +658,7 @@ public class calcForm extends javax.swing.JFrame {
         displaytxt = "";
         displaytxt = displaytxt + dos;
         } else { displaytxt = displaytxt + dos;}
-        ifOperador = false;
+        //ifOperador = false;
         display.setText(displaytxt);
     }//GEN-LAST:event_jLabel11MouseClicked
 
@@ -669,6 +670,13 @@ public class calcForm extends javax.swing.JFrame {
             } else { displaytxt = displaytxt + suma;}
             display.setText(displaytxt);
             ifOperador = true;
+        } else {
+        DecimalFormat format = new DecimalFormat("0.###"); // mostrara tres lugares de decimales
+        double resultado = func.oper(displaytxt); // uso de case y metodo para operacion
+        jLabel1.setText(displaytxt + " =");
+        displaytxt = String.valueOf(format.format(resultado));
+        display.setText(displaytxt); // muestra el resultado final
+        ifOperador = false;
         }
 
     }//GEN-LAST:event_jLabel19MouseClicked
@@ -689,7 +697,8 @@ public class calcForm extends javax.swing.JFrame {
         double resultado = func.oper(displaytxt); // uso de case y metodo para operacion
         display.setText(format.format(resultado)); // muestra el resultado final
         jLabel1.setText(displaytxt + " =");
-        displaytxt = String.valueOf(resultado);
+        ifOperador = false;
+        displaytxt = String.valueOf(format.format(resultado));
     }//GEN-LAST:event_jLabel20MouseClicked
 
 
