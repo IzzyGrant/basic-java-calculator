@@ -8,8 +8,8 @@ import java.util.Arrays; // libreria de arreglos
  */
 public class calcForm extends javax.swing.JFrame {
 
-    String displaytxt = "0"; 
-    boolean ifOperador, ifDot = false;
+    static String displaytxt = "0"; 
+    static boolean ifOperador, ifDot, turn = false;
 
     
     static class func{ // Funcion experimental
@@ -20,6 +20,7 @@ public class calcForm extends javax.swing.JFrame {
           double b = Double.parseDouble(split[2]); // usando parse
           double res = a+b; // operando los 2 valores obtenidos del arreglo
           System.out.println(Arrays.toString(split) + "resultado: " + res); // display output
+          ifDot = false;
           
           return res;
         }
@@ -639,7 +640,6 @@ public class calcForm extends javax.swing.JFrame {
         displaytxt = "";
         displaytxt = displaytxt + uno;
         } else { displaytxt = displaytxt + uno;}
-        //ifOperador = false;
         display.setText(displaytxt);
     }//GEN-LAST:event_jLabel10MouseClicked
 
@@ -658,7 +658,6 @@ public class calcForm extends javax.swing.JFrame {
         displaytxt = "";
         displaytxt = displaytxt + dos;
         } else { displaytxt = displaytxt + dos;}
-        //ifOperador = false;
         display.setText(displaytxt);
     }//GEN-LAST:event_jLabel11MouseClicked
 
@@ -669,7 +668,9 @@ public class calcForm extends javax.swing.JFrame {
             if (displaytxt == "0"){ 
             } else { displaytxt = displaytxt + suma;}
             display.setText(displaytxt);
+            ifDot = false;
             ifOperador = true;
+            
         } else {
         DecimalFormat format = new DecimalFormat("0.###"); // mostrara tres lugares de decimales
         double resultado = func.oper(displaytxt); // uso de case y metodo para operacion
@@ -683,11 +684,19 @@ public class calcForm extends javax.swing.JFrame {
     private void jLabel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseClicked
         // tecla .
         char punto = '.';
+        
+        if(ifDot == false){
+        
         if (displaytxt == "0"){ 
         displaytxt = "";
         displaytxt = displaytxt + punto;
         } else { displaytxt = displaytxt + punto;}
         display.setText(displaytxt);
+        ifDot = true;
+            
+        }
+        
+
     }//GEN-LAST:event_jLabel14MouseClicked
 
     private void jLabel20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel20MouseClicked
@@ -696,6 +705,7 @@ public class calcForm extends javax.swing.JFrame {
         double resultado = func.oper(displaytxt); // uso de case y metodo para operacion
         display.setText(format.format(resultado)); // muestra el resultado final
         jLabel1.setText(displaytxt + " =");
+        ifDot = false;
         ifOperador = false;
         displaytxt = String.valueOf(format.format(resultado));
     }//GEN-LAST:event_jLabel20MouseClicked
