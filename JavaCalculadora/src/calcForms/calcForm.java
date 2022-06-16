@@ -16,7 +16,7 @@ public class calcForm extends javax.swing.JFrame {
           String[] split = cadena.split("(?<=[\\d.])(?=[^\\d.])|(?<=[^\\d.])(?=[\\d.])");
           // operacion de split
           double a = Double.parseDouble(split[0]); // usando parse
-          double b = Double.parseDouble(split[2]); 
+          double b = Double.parseDouble(split[2]); // usando parse
           double res = a+b; // operando los 2 valores obtenidos del arreglo
           System.out.println(Arrays.toString(split) + "resultado: " + res); // display output
           
