@@ -17,6 +17,7 @@ public class calcForm extends javax.swing.JFrame {
           // operacion de split
           double a = Double.parseDouble(split[0]); // usando parse
           double b = Double.parseDouble(split[2]); // usando parse
+          
           double res = a+b; // operando los 2 valores obtenidos del arreglo
           System.out.println(Arrays.toString(split) + "resultado: " + res); // display output
           ifDot = false;
@@ -66,7 +67,7 @@ public class calcForm extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(51, 51, 51));
 
         display.setBackground(new java.awt.Color(0, 102, 102));
-        display.setFont(new java.awt.Font("Roboto Thin", 0, 48)); // NOI18N
+        display.setFont(new java.awt.Font("Roboto Thin", 0, 36)); // NOI18N
         display.setForeground(new java.awt.Color(255, 255, 255));
         display.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         display.setText(displaytxt);
@@ -442,7 +443,7 @@ public class calcForm extends javax.swing.JFrame {
                     .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
 
         jLabel1.setFont(new java.awt.Font("sansserif", 1, 13)); // NOI18N
@@ -471,7 +472,7 @@ public class calcForm extends javax.swing.JFrame {
                 .addComponent(display)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(51, 51, 51))
+                .addGap(38, 38, 38))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
