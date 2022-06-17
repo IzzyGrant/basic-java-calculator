@@ -14,9 +14,18 @@ public class calcForm extends javax.swing.JFrame {
     static class func{ // Funcion experimental
          static public double oper(String cadena){
           String[] split = cadena.split("(?<=[\\d.])(?=[^\\d.])|(?<=[^\\d.])(?=[\\d.])");
-          // operacion de split
+          
+          if(split[0]=="-"){
+          
+          }
+          
           double a = Double.parseDouble(split[0]); // usando parse
           double b = Double.parseDouble(split[2]); // usando parse
+          
+          
+          
+          
+          
           double res = 0;
           switch(split[1]){
             case "+":
@@ -25,10 +34,9 @@ public class calcForm extends javax.swing.JFrame {
             case "-":
             res = a-b;
             break;
-              
           }
           //double res = a+b; // operando los 2 valores obtenidos del arreglo
-          System.out.println(Arrays.toString(split) + "resultado: " + res); // display output
+          System.out.println(Arrays.toString(split) + "resultado: " + res + "|  |  "); // display output
           ifDot = false;
           
           return res;
