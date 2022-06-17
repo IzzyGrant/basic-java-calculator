@@ -17,8 +17,17 @@ public class calcForm extends javax.swing.JFrame {
           // operacion de split
           double a = Double.parseDouble(split[0]); // usando parse
           double b = Double.parseDouble(split[2]); // usando parse
-          
-          double res = a+b; // operando los 2 valores obtenidos del arreglo
+          double res = 0;
+          switch(split[1]){
+            case "+":
+            res = a+b;
+            break;
+            case "-":
+            res = a-b;
+            break;
+              
+          }
+          //double res = a+b; // operando los 2 valores obtenidos del arreglo
           System.out.println(Arrays.toString(split) + "resultado: " + res); // display output
           ifDot = false;
           
@@ -318,11 +327,14 @@ public class calcForm extends javax.swing.JFrame {
         jLabel18.setText("-");
         jLabel18.setOpaque(true);
         jLabel18.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel18MouseEntered(evt);
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel18MouseClicked(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel18MouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel18MouseEntered(evt);
             }
         });
 
@@ -709,6 +721,25 @@ public class calcForm extends javax.swing.JFrame {
         ifOperador = false;
         displaytxt = String.valueOf(format.format(resultado));
     }//GEN-LAST:event_jLabel20MouseClicked
+
+    private void jLabel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel18MouseClicked
+        char resta = '-';
+        
+        if(ifOperador == false){
+            if (displaytxt == "0"){ 
+            } else { displaytxt = displaytxt + resta;}
+            display.setText(displaytxt);
+            ifDot = false;
+            ifOperador = true;
+            
+        } else {
+        DecimalFormat format = new DecimalFormat("0.###"); // mostrara tres lugares de decimales
+        double resultado = func.oper(displaytxt); // uso de case y metodo para operacion
+        jLabel1.setText(displaytxt + " =");
+        displaytxt = String.valueOf(format.format(resultado) + "-");
+        display.setText(displaytxt); // muestra el resultado final
+        }
+    }//GEN-LAST:event_jLabel18MouseClicked
 
 
     public static void main(String args[]) {
