@@ -15,8 +15,8 @@ public class calcForm extends javax.swing.JFrame {
          static public double oper(String cadena){ // metodo de clase 
           String[] split = cadena.split("(?<=[\\d.])(?=[^\\d.])|(?<=[^\\d.])(?=[\\d.])");
           
-          
-          if("-".equals(split[0])){ // en caso de que el primer numero sea negativo se arreglan las posiciones
+          // en caso de que el primer numero sea negativo se arreglan las posiciones
+          if("-".equals(split[0])){ 
               System.out.println("El arreglo contiene el primer numero como negativo : " +Arrays.toString(split));
               split[0] = "-" + split[1];
               split[1] = split[2];
@@ -25,6 +25,7 @@ public class calcForm extends javax.swing.JFrame {
               System.out.println("Correccion de arreglo: " +Arrays.toString(split));
           }
           
+          // en caso de que el segundo numero sea negativo se arreglan las posiciones
           if("+-".equals(split[1]) || "--".equals(split[1]) || "*-".equals(split[1]) || "/-".equals(split[1])){
               System.out.println("El arreglo contiene el segundo numero como negativo : " +Arrays.toString(split));
               char operadorDoble = split[1].charAt(0);
@@ -47,12 +48,10 @@ public class calcForm extends javax.swing.JFrame {
               System.out.println("Correccion de arreglo: " +Arrays.toString(split));
           } 
           
+          // Una vez corregidos los arreglos en caso de negativos ahora se traduce el String en double
+          // para poder operar los numeros ingresados.
           double a = Double.parseDouble(split[0]); // usando parse
           double b = Double.parseDouble(split[2]); // usando parse
-          
-          
-          
-          
           
           double resultado = 0;
           switch(split[1]){
@@ -132,11 +131,14 @@ public class calcForm extends javax.swing.JFrame {
         jLabel2.setText("7");
         jLabel2.setOpaque(true);
         jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabel2MouseExited(evt);
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jLabel2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel2MouseExited(evt);
             }
         });
 
@@ -180,11 +182,14 @@ public class calcForm extends javax.swing.JFrame {
         jLabel4.setText("8");
         jLabel4.setOpaque(true);
         jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabel4MouseExited(evt);
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel4MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jLabel4MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel4MouseExited(evt);
             }
         });
 
@@ -195,11 +200,19 @@ public class calcForm extends javax.swing.JFrame {
         jLabel6.setText("9");
         jLabel6.setOpaque(true);
         jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabel6MouseExited(evt);
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel6MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jLabel6MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel6MouseExited(evt);
+            }
+        });
+        jLabel6.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jLabel6KeyPressed(evt);
             }
         });
 
@@ -210,11 +223,14 @@ public class calcForm extends javax.swing.JFrame {
         jLabel7.setText("4");
         jLabel7.setOpaque(true);
         jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabel7MouseExited(evt);
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel7MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jLabel7MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel7MouseExited(evt);
             }
         });
 
@@ -225,11 +241,14 @@ public class calcForm extends javax.swing.JFrame {
         jLabel8.setText("5");
         jLabel8.setOpaque(true);
         jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabel8MouseExited(evt);
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel8MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jLabel8MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel8MouseExited(evt);
             }
         });
 
@@ -240,11 +259,14 @@ public class calcForm extends javax.swing.JFrame {
         jLabel9.setText("6");
         jLabel9.setOpaque(true);
         jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabel9MouseExited(evt);
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel9MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jLabel9MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel9MouseExited(evt);
             }
         });
 
@@ -291,11 +313,14 @@ public class calcForm extends javax.swing.JFrame {
         jLabel12.setText("3");
         jLabel12.setOpaque(true);
         jLabel12.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabel12MouseExited(evt);
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel12MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jLabel12MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel12MouseExited(evt);
             }
         });
 
@@ -306,6 +331,9 @@ public class calcForm extends javax.swing.JFrame {
         jLabel13.setText("0");
         jLabel13.setOpaque(true);
         jLabel13.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel13MouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jLabel13MouseEntered(evt);
             }
@@ -719,8 +747,7 @@ public class calcForm extends javax.swing.JFrame {
         // tecla +
         char suma = '+';
         if(ifOperador == false){
-            if (displaytxt == "0"){ 
-            } else { displaytxt = displaytxt + suma;}
+            if (displaytxt != "0"){displaytxt = displaytxt + suma;} 
             display.setText(displaytxt);
             ifDot = false;
             ifOperador = true;
@@ -750,7 +777,6 @@ public class calcForm extends javax.swing.JFrame {
             
         }
         
-
     }//GEN-LAST:event_jLabel14MouseClicked
 
     private void jLabel20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel20MouseClicked
@@ -782,6 +808,90 @@ public class calcForm extends javax.swing.JFrame {
         display.setText(displaytxt); // muestra el resultado final
         }
     }//GEN-LAST:event_jLabel18MouseClicked
+
+    private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseClicked
+        // tecla 3
+        char tres = '3';
+        if (displaytxt == "0"){ 
+        displaytxt = "";
+        displaytxt = displaytxt + tres;
+        } else { displaytxt = displaytxt + tres;}
+        display.setText(displaytxt);
+    }//GEN-LAST:event_jLabel12MouseClicked
+
+    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
+        // tecla 4
+        char cuatro = '4';
+        if (displaytxt == "0"){ 
+        displaytxt = "";
+        displaytxt = displaytxt + cuatro;
+        } else { displaytxt = displaytxt + cuatro;}
+        display.setText(displaytxt);
+    }//GEN-LAST:event_jLabel7MouseClicked
+
+    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
+        // tecla 5
+        char cinco = '5';
+        if (displaytxt == "0"){ 
+        displaytxt = "";
+        displaytxt = displaytxt + cinco;
+        } else { displaytxt = displaytxt + cinco;}
+        display.setText(displaytxt);
+    }//GEN-LAST:event_jLabel8MouseClicked
+
+    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
+        // tecla 6
+        char seis = '6';
+        if (displaytxt == "0"){ 
+        displaytxt = "";
+        displaytxt = displaytxt + seis;
+        } else { displaytxt = displaytxt + seis;}
+        display.setText(displaytxt);
+    }//GEN-LAST:event_jLabel9MouseClicked
+
+    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+        // tecla 7
+        char siete = '7';
+        if (displaytxt == "0"){ 
+        displaytxt = "";
+        displaytxt = displaytxt + siete;
+        } else { displaytxt = displaytxt + siete;}
+        display.setText(displaytxt);
+    }//GEN-LAST:event_jLabel2MouseClicked
+
+    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
+        // tecla 8
+        char ocho = '8';
+        if (displaytxt == "0"){ 
+        displaytxt = "";
+        displaytxt = displaytxt + ocho;
+        } else { displaytxt = displaytxt + ocho;}
+        display.setText(displaytxt);
+    }//GEN-LAST:event_jLabel4MouseClicked
+
+    private void jLabel6KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jLabel6KeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel6KeyPressed
+
+    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+        // tecla 9
+        char nueve = '9';
+        if (displaytxt == "0"){ 
+        displaytxt = "";
+        displaytxt = displaytxt + nueve;
+        } else { displaytxt = displaytxt + nueve;}
+        display.setText(displaytxt);
+    }//GEN-LAST:event_jLabel6MouseClicked
+
+    private void jLabel13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MouseClicked
+        // tecla 0
+        char cero = '0';
+        if (displaytxt == "0"){ 
+        displaytxt = "";
+        displaytxt = displaytxt + cero;
+        } else { displaytxt = displaytxt + cero;}
+        display.setText(displaytxt);
+    }//GEN-LAST:event_jLabel13MouseClicked
 
 
     public static void main(String args[]) {
