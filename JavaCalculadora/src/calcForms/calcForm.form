@@ -574,7 +574,7 @@
                   <Color blue="ff" green="66" red="66" type="rgb"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="4"/>
-                <Property name="text" type="java.lang.String" value="Izzy"/>
+                <Property name="text" type="java.lang.String" value=":)"/>
                 <Property name="toolTipText" type="java.lang.String" value=""/>
               </Properties>
               <Events>

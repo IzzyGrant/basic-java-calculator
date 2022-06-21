@@ -432,7 +432,7 @@ public class calcForm extends javax.swing.JFrame {
 
         jLabel3.setForeground(new java.awt.Color(102, 102, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel3.setText("Izzy");
+        jLabel3.setText(":)");
         jLabel3.setToolTipText("");
         jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
