@@ -117,7 +117,7 @@ public class calcForm extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(51, 51, 51));
 
-        display.setBackground(new java.awt.Color(0, 102, 102));
+        display.setBackground(new java.awt.Color(0, 0, 0));
         display.setFont(new java.awt.Font("Roboto Thin", 0, 36)); // NOI18N
         display.setForeground(new java.awt.Color(255, 255, 255));
         display.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -716,7 +716,7 @@ public class calcForm extends javax.swing.JFrame {
     private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
         // tecla 1
         char uno = '1';
-        if (displaytxt == "0"){ 
+        if (displaytxt == " "){ 
         displaytxt = "";
         displaytxt = displaytxt + uno;
         } else { displaytxt = displaytxt + uno;}
@@ -725,7 +725,7 @@ public class calcForm extends javax.swing.JFrame {
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
         // tecla AC 
-        displaytxt = "0";
+        displaytxt = " ";
         display.setText(displaytxt);
         jLabel1.setText("0");
         ifOperador = false;
@@ -734,7 +734,7 @@ public class calcForm extends javax.swing.JFrame {
     private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
         // tecla 2
         char dos = '2';
-        if (displaytxt == "0"){ 
+        if (displaytxt == " "){ 
         displaytxt = "";
         displaytxt = displaytxt + dos;
         } else { displaytxt = displaytxt + dos;}
@@ -745,7 +745,7 @@ public class calcForm extends javax.swing.JFrame {
         // tecla +
         char suma = '+';
         if(ifOperador == false){
-            if (displaytxt != "0"){displaytxt = displaytxt + suma; 
+            if (displaytxt != " "){displaytxt = displaytxt + suma; 
             display.setText(displaytxt);
             ifDot = false;
             ifOperador = true;
@@ -767,7 +767,7 @@ public class calcForm extends javax.swing.JFrame {
         
         if(ifDot == false){
         
-        if (displaytxt == "0"){ 
+        if (displaytxt == " "){ 
         displaytxt = "";
         displaytxt = displaytxt + punto;
         } else { displaytxt = displaytxt + punto;}
@@ -793,7 +793,7 @@ public class calcForm extends javax.swing.JFrame {
         char resta = '-';
         
         if(ifOperador == false){
-            if (displaytxt == "0"){ 
+            if (displaytxt == " "){ 
             } else { displaytxt = displaytxt + resta;
             display.setText(displaytxt);
             ifDot = false;
@@ -812,7 +812,7 @@ public class calcForm extends javax.swing.JFrame {
     private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseClicked
         // tecla 3
         char tres = '3';
-        if (displaytxt == "0"){ 
+        if (displaytxt == " "){ 
         displaytxt = "";
         displaytxt = displaytxt + tres;
         } else { displaytxt = displaytxt + tres;}
@@ -822,7 +822,7 @@ public class calcForm extends javax.swing.JFrame {
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
         // tecla 4
         char cuatro = '4';
-        if (displaytxt == "0"){ 
+        if (displaytxt == " "){ 
         displaytxt = "";
         displaytxt = displaytxt + cuatro;
         } else { displaytxt = displaytxt + cuatro;}
@@ -832,7 +832,7 @@ public class calcForm extends javax.swing.JFrame {
     private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
         // tecla 5
         char cinco = '5';
-        if (displaytxt == "0"){ 
+        if (displaytxt == " "){ 
         displaytxt = "";
         displaytxt = displaytxt + cinco;
         } else { displaytxt = displaytxt + cinco;}
@@ -842,7 +842,7 @@ public class calcForm extends javax.swing.JFrame {
     private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
         // tecla 6
         char seis = '6';
-        if (displaytxt == "0"){ 
+        if (displaytxt == " "){ 
         displaytxt = "";
         displaytxt = displaytxt + seis;
         } else { displaytxt = displaytxt + seis;}
@@ -852,7 +852,7 @@ public class calcForm extends javax.swing.JFrame {
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
         // tecla 7
         char siete = '7';
-        if (displaytxt == "0"){ 
+        if (displaytxt == " "){ 
         displaytxt = "";
         displaytxt = displaytxt + siete;
         } else { displaytxt = displaytxt + siete;}
@@ -862,7 +862,7 @@ public class calcForm extends javax.swing.JFrame {
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
         // tecla 8
         char ocho = '8';
-        if (displaytxt == "0"){ 
+        if (displaytxt == " "){ 
         displaytxt = "";
         displaytxt = displaytxt + ocho;
         } else { displaytxt = displaytxt + ocho;}
@@ -876,7 +876,7 @@ public class calcForm extends javax.swing.JFrame {
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
         // tecla 9
         char nueve = '9';
-        if (displaytxt == "0"){ 
+        if (displaytxt == " "){ 
         displaytxt = "";
         displaytxt = displaytxt + nueve;
         } else { displaytxt = displaytxt + nueve;}
@@ -886,7 +886,7 @@ public class calcForm extends javax.swing.JFrame {
     private void jLabel13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MouseClicked
         // tecla 0
         char cero = '0';
-        if (displaytxt == "0"){ 
+        if (displaytxt == " "){ 
         displaytxt = "";
         displaytxt = displaytxt + cero;
         } else { displaytxt = displaytxt + cero;}
