@@ -8,21 +8,44 @@ import java.util.Arrays; // libreria de arreglos
  */
 public class calcForm extends javax.swing.JFrame {
 
-    static String displaytxt = "-2+1"; 
+    static String displaytxt = "-2+-5"; 
     static boolean ifOperador, ifDot, turn = false;
     
-    static class func{ // Funcion experimental
-         static public double oper(String cadena){
+    static class func{ // clase 
+         static public double oper(String cadena){ // metodo de clase 
           String[] split = cadena.split("(?<=[\\d.])(?=[^\\d.])|(?<=[^\\d.])(?=[\\d.])");
           
           
           if("-".equals(split[0])){ // en caso de que el primer numero sea negativo se arreglan las posiciones
+              System.out.println("El arreglo contiene el primer numero como negativo : " +Arrays.toString(split));
               split[0] = "-" + split[1];
               split[1] = split[2];
               split[2] = split[3];
-              split[3] = "";
-              System.out.println(split);
+              split[3] = null;
+              System.out.println("Correccion de arreglo: " +Arrays.toString(split));
           }
+          
+          if("+-".equals(split[1]) || "--".equals(split[1]) || "*-".equals(split[1]) || "/-".equals(split[1])){
+              System.out.println("El arreglo contiene el segundo numero como negativo : " +Arrays.toString(split));
+              char operadorDoble = split[1].charAt(0);
+              switch(operadorDoble){
+                  case '+':
+                    split[1] = "+";        
+                  break;
+                  case '-':
+                    split[1] = "-";        
+                  break;
+                  case '*':
+                    split[1] = "*";        
+                  break;
+                  case '/':
+                    split[1] = "/";        
+                  break;
+              }
+              String aux = split[2];
+              split[2] = "-" + aux;
+              System.out.println("Correccion de arreglo: " +Arrays.toString(split));
+          } 
           
           double a = Double.parseDouble(split[0]); // usando parse
           double b = Double.parseDouble(split[2]); // usando parse
@@ -31,20 +54,26 @@ public class calcForm extends javax.swing.JFrame {
           
           
           
-          double res = 0;
+          double resultado = 0;
           switch(split[1]){
             case "+":
-            res = a+b;
+            resultado = a+b;
             break;
             case "-":
-            res = a-b;
+            resultado = a-b;
+            break;
+            case "*":
+            resultado = a*b;
+            break;
+            case "/":
+            resultado = a/b;
             break;
           }
           //double res = a+b; // operando los 2 valores obtenidos del arreglo
-          System.out.println(Arrays.toString(split) + "resultado: " + res + "|  |  "); // display output
+          System.out.println(Arrays.toString(split) + "resultado: " + resultado + "|  |  "); // display output
           ifDot = false;
           
-          return res;
+          return resultado;
         }
     }
     
