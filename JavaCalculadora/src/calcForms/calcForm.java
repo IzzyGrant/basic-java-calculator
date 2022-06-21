@@ -8,15 +8,20 @@ import java.util.Arrays; // libreria de arreglos
  */
 public class calcForm extends javax.swing.JFrame {
 
-    static String displaytxt = "0"; 
+    static String displaytxt = "-2+1"; 
     static boolean ifOperador, ifDot, turn = false;
     
     static class func{ // Funcion experimental
          static public double oper(String cadena){
           String[] split = cadena.split("(?<=[\\d.])(?=[^\\d.])|(?<=[^\\d.])(?=[\\d.])");
           
-          if(split[0]=="-"){
           
+          if("-".equals(split[0])){ // en caso de que el primer numero sea negativo se arreglan las posiciones
+              split[0] = "-" + split[1];
+              split[1] = split[2];
+              split[2] = split[3];
+              split[3] = "";
+              System.out.println(split);
           }
           
           double a = Double.parseDouble(split[0]); // usando parse
