@@ -732,6 +732,7 @@ public class calcForm extends javax.swing.JFrame {
         ifDot = false;
     }//GEN-LAST:event_jLabel5MouseClicked
 
+    
     private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
         // tecla 2
         char dos = '2';
