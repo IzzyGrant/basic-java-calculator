@@ -729,6 +729,7 @@ public class calcForm extends javax.swing.JFrame {
         display.setText(displaytxt);
         jLabel1.setText("0");
         ifOperador = false;
+        ifDot = false;
     }//GEN-LAST:event_jLabel5MouseClicked
 
     private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
@@ -784,9 +785,14 @@ public class calcForm extends javax.swing.JFrame {
         double resultado = func.oper(displaytxt); // uso de case y metodo para operacion
         display.setText(format.format(resultado)); // muestra el resultado final
         jLabel1.setText(displaytxt + " =");
-        ifDot = false;
+        //ifDot = false;
         ifOperador = false;
         displaytxt = String.valueOf(format.format(resultado));
+        
+        // Se agrega verificacion de numero decimal despues de resultado para no ingresar doble punto
+        int findDot = displaytxt.indexOf( '.');
+        System.out.println("Tiene punto en: " + findDot);
+        if(findDot != -1){ifDot = true;} else{ifDot = false;}
     }//GEN-LAST:event_jLabel20MouseClicked
 
     private void jLabel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel18MouseClicked
