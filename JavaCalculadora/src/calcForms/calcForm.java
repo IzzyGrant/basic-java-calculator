@@ -1,6 +1,5 @@
 
 package calcForms;
-import java.awt.Font;
 import java.text.DecimalFormat;
 import java.util.Arrays; // libreria de arreglos
 import javax.swing.JOptionPane;
@@ -128,12 +127,13 @@ public class calcForm extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(51, 51, 51));
 
-        display.setBackground(new java.awt.Color(0, 0, 0));
+        display.setBackground(new java.awt.Color(51, 51, 51));
         display.setFont(new java.awt.Font("Roboto Thin", 0, 36)); // NOI18N
         display.setForeground(new java.awt.Color(255, 255, 255));
         display.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         display.setText(displaytxt);
         display.setAlignmentY(0.0F);
+        display.setOpaque(true);
 
         jPanel1.setBackground(new java.awt.Color(31, 31, 31));
 
@@ -571,7 +571,7 @@ public class calcForm extends javax.swing.JFrame {
                 .addGap(10, 10, 10)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(display)
+                .addComponent(display, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(38, 38, 38))
@@ -594,9 +594,25 @@ public class calcForm extends javax.swing.JFrame {
     
     private void fontSize(){
     
-        if(displaytxt.length() > 12){
-        display.setFont(new java.awt.Font("Roboto Thin", 0, 24)); // NOI18N
+        //Esta funcion al ser llamada modifica el tamaño de fuente de los numeros de pantalla
+        // para impeduir que quede fuera de vista y distorcionen el programa.
+        if(displaytxt.length() <= 14){
+        display.setFont(new java.awt.Font("Roboto Thin", 0, 36));
+   // System.out.println("Nivel 0");
+        }else if(displaytxt.length() >= 15 && displaytxt.length() <= 21){
+    display.setFont(new java.awt.Font("Roboto Thin", 0, 24));
+   // System.out.println("Nivel 1");
+        }else if(displaytxt.length() >= 22 && displaytxt.length() <= 28){
+    display.setFont(new java.awt.Font("Roboto Thin", 0, 18));
+   // System.out.println("Nivel 2");
+        }else if(displaytxt.length() >= 29 && displaytxt.length() <= 39){
+    display.setFont(new java.awt.Font("Roboto Thin", 0, 12));
+   // System.out.println("Nivel 3");
+        }else if(displaytxt.length() >= 40 && displaytxt.length() <= 50){
+    display.setFont(new java.awt.Font("Roboto Thin", 0, 8));
+   // System.out.println("Nivel 4");
         }
+   //     System.out.println("numero de caracteres: " + displaytxt.length());
     }
     
     private void jLabel5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseEntered
@@ -743,7 +759,7 @@ public class calcForm extends javax.swing.JFrame {
         displaytxt = displaytxt + uno;
         } else { displaytxt = displaytxt + uno;}
         display.setText(displaytxt);
-        fontSize();
+        fontSize(); // Funcion que rectifica el tamaño de fuente en pantalla
     }//GEN-LAST:event_jLabel10MouseClicked
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
@@ -753,6 +769,7 @@ public class calcForm extends javax.swing.JFrame {
         jLabel1.setText("0");
         ifOperador = false;
         ifDot = false;
+        fontSize(); // Funcion que rectifica el tamaño de fuente en pantalla
     }//GEN-LAST:event_jLabel5MouseClicked
 
     
@@ -764,6 +781,7 @@ public class calcForm extends javax.swing.JFrame {
         displaytxt = displaytxt + dos;
         } else { displaytxt = displaytxt + dos;}
         display.setText(displaytxt);
+        fontSize(); // Funcion que rectifica el tamaño de fuente en pantalla
     }//GEN-LAST:event_jLabel11MouseClicked
 
     private void jLabel19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel19MouseClicked
@@ -783,7 +801,7 @@ public class calcForm extends javax.swing.JFrame {
         displaytxt = String.valueOf(format.format(resultado) + "+");
         display.setText(displaytxt); // muestra el resultado final
         }
-
+        fontSize(); // Funcion que rectifica el tamaño de fuente en pantalla
     }//GEN-LAST:event_jLabel19MouseClicked
 
     private void jLabel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseClicked
@@ -800,7 +818,7 @@ public class calcForm extends javax.swing.JFrame {
         ifDot = true;
             
         }
-        
+        fontSize(); // Funcion que rectifica el tamaño de fuente en pantalla
     }//GEN-LAST:event_jLabel14MouseClicked
 
     private void jLabel20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel20MouseClicked
@@ -817,6 +835,7 @@ public class calcForm extends javax.swing.JFrame {
         int findDot = displaytxt.indexOf( '.');
         System.out.println("Tiene punto en: " + findDot);
         if(findDot != -1){ifDot = true;} else{ifDot = false;}
+        fontSize(); // Funcion que rectifica el tamaño de fuente en pantalla
     }//GEN-LAST:event_jLabel20MouseClicked
 
     private void jLabel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel18MouseClicked
@@ -837,6 +856,7 @@ public class calcForm extends javax.swing.JFrame {
         displaytxt = String.valueOf(format.format(resultado) + "-");
         display.setText(displaytxt); // muestra el resultado final
         }
+        fontSize(); // Funcion que rectifica el tamaño de fuente en pantalla
     }//GEN-LAST:event_jLabel18MouseClicked
 
     private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseClicked
@@ -847,6 +867,7 @@ public class calcForm extends javax.swing.JFrame {
         displaytxt = displaytxt + tres;
         } else { displaytxt = displaytxt + tres;}
         display.setText(displaytxt);
+        fontSize(); // Funcion que rectifica el tamaño de fuente en pantalla
     }//GEN-LAST:event_jLabel12MouseClicked
 
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
@@ -857,6 +878,7 @@ public class calcForm extends javax.swing.JFrame {
         displaytxt = displaytxt + cuatro;
         } else { displaytxt = displaytxt + cuatro;}
         display.setText(displaytxt);
+        fontSize(); // Funcion que rectifica el tamaño de fuente en pantalla
     }//GEN-LAST:event_jLabel7MouseClicked
 
     private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
@@ -867,6 +889,7 @@ public class calcForm extends javax.swing.JFrame {
         displaytxt = displaytxt + cinco;
         } else { displaytxt = displaytxt + cinco;}
         display.setText(displaytxt);
+        fontSize(); // Funcion que rectifica el tamaño de fuente en pantalla
     }//GEN-LAST:event_jLabel8MouseClicked
 
     private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
@@ -877,6 +900,7 @@ public class calcForm extends javax.swing.JFrame {
         displaytxt = displaytxt + seis;
         } else { displaytxt = displaytxt + seis;}
         display.setText(displaytxt);
+        fontSize(); // Funcion que rectifica el tamaño de fuente en pantalla
     }//GEN-LAST:event_jLabel9MouseClicked
 
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
@@ -887,6 +911,7 @@ public class calcForm extends javax.swing.JFrame {
         displaytxt = displaytxt + siete;
         } else { displaytxt = displaytxt + siete;}
         display.setText(displaytxt);
+        fontSize(); // Funcion que rectifica el tamaño de fuente en pantalla
     }//GEN-LAST:event_jLabel2MouseClicked
 
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
@@ -897,6 +922,7 @@ public class calcForm extends javax.swing.JFrame {
         displaytxt = displaytxt + ocho;
         } else { displaytxt = displaytxt + ocho;}
         display.setText(displaytxt);
+        fontSize(); // Funcion que rectifica el tamaño de fuente en pantalla
     }//GEN-LAST:event_jLabel4MouseClicked
 
     private void jLabel6KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jLabel6KeyPressed
@@ -911,6 +937,7 @@ public class calcForm extends javax.swing.JFrame {
         displaytxt = displaytxt + nueve;
         } else { displaytxt = displaytxt + nueve;}
         display.setText(displaytxt);
+        fontSize(); // Funcion que rectifica el tamaño de fuente en pantalla
     }//GEN-LAST:event_jLabel6MouseClicked
 
     private void jLabel13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MouseClicked
@@ -921,6 +948,7 @@ public class calcForm extends javax.swing.JFrame {
         displaytxt = displaytxt + cero;
         } else { displaytxt = displaytxt + cero;}
         display.setText(displaytxt);
+        fontSize(); // Funcion que rectifica el tamaño de fuente en pantalla
     }//GEN-LAST:event_jLabel13MouseClicked
 
     private void jLabel3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jLabel3KeyPressed
