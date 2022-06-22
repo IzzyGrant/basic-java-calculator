@@ -12,11 +12,18 @@ public class calcForm extends javax.swing.JFrame {
     static String displaytxt = "-2+-5"; 
     static boolean ifOperador, ifDot, turn = false;
     
-    static class func{ // clase 
+    static class func{ // clase
+        
+        // Este metodo 'oper' recibe el String ingresado de la pantalla, ejemplo: "12.6+20"
+        // colocando como argumento del mismo dicha cadena a procesar
          static public double oper(String cadena){ // metodo de clase 
+             
+        // Regex que convierte el String en un arreglo(llamado split) seccionando numeros y operadores.
+        // Ejemplo: "12.6+20" ==> [12.6, +, 20]
           String[] split = cadena.split("(?<=[\\d.])(?=[^\\d.])|(?<=[^\\d.])(?=[\\d.])");
           
-          // en caso de que el primer numero sea negativo se arreglan las posiciones
+        // en caso de que el primer numero sea negativo se arreglan las posiciones
+        // Ejemplo: (si en pantalla se ingreso "-12.6+20") [-, 12.6, +, 20] ==> [-12.6, +, 20, null]
           if("-".equals(split[0])){ 
               System.out.println("El arreglo contiene el primer numero como negativo : " +Arrays.toString(split));
               split[0] = "-" + split[1];
@@ -27,6 +34,7 @@ public class calcForm extends javax.swing.JFrame {
           }
           
           // en caso de que el segundo numero sea negativo se arreglan las posiciones
+          // Ejemplo: (si en pantalla se ingreso "12.6+-20") [12.6, +-, 20] ==> [12.6, +, -20]
           if("+-".equals(split[1]) || "--".equals(split[1]) || "*-".equals(split[1]) || "/-".equals(split[1])){
               System.out.println("El arreglo contiene el segundo numero como negativo : " +Arrays.toString(split));
               char operadorDoble = split[1].charAt(0);
@@ -54,6 +62,7 @@ public class calcForm extends javax.swing.JFrame {
           double a = Double.parseDouble(split[0]); // usando parse
           double b = Double.parseDouble(split[2]); // usando parse
           
+        // Se operan los numeros obtenidos dependiendo del operador solicitado: + ,- ,* , /
           double resultado = 0;
           switch(split[1]){
             case "+":
