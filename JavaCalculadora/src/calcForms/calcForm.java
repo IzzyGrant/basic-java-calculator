@@ -1,5 +1,6 @@
 
 package calcForms;
+import java.awt.Font;
 import java.text.DecimalFormat;
 import java.util.Arrays; // libreria de arreglos
 import javax.swing.JOptionPane;
@@ -82,8 +83,9 @@ public class calcForm extends javax.swing.JFrame {
           System.out.println(Arrays.toString(split) + "resultado: " + resultado + "|  |  "); // display output
           ifDot = false;
           
-          return resultado;
-        }
+          return resultado; // Devuelve el resultado de la operacion.
+        } // Fin de metodo
+           
     }
     
     
@@ -576,16 +578,24 @@ public class calcForm extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 443, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 443, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    
+    private void fontSize(){
+    
+        if(displaytxt.length() > 12){
+        display.setFont(new java.awt.Font("Roboto Thin", 0, 24)); // NOI18N
+        }
+    }
+    
     private void jLabel5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseEntered
         jLabel5.setBackground(new java.awt.Color(63, 0, 0));
     }//GEN-LAST:event_jLabel5MouseEntered
@@ -730,6 +740,7 @@ public class calcForm extends javax.swing.JFrame {
         displaytxt = displaytxt + uno;
         } else { displaytxt = displaytxt + uno;}
         display.setText(displaytxt);
+        fontSize();
     }//GEN-LAST:event_jLabel10MouseClicked
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
@@ -765,7 +776,7 @@ public class calcForm extends javax.swing.JFrame {
         } else {
         DecimalFormat format = new DecimalFormat("0.###"); // mostrara tres lugares de decimales
         double resultado = func.oper(displaytxt); // uso de case y metodo para operacion
-        jLabel1.setText(displaytxt + " =");
+        jLabel1.setText(displaytxt + " ="); // Se guarda la operacion previamente realizada en subpantalla(digitos azules)
         displaytxt = String.valueOf(format.format(resultado) + "+");
         display.setText(displaytxt); // muestra el resultado final
         }
@@ -794,7 +805,7 @@ public class calcForm extends javax.swing.JFrame {
         DecimalFormat format = new DecimalFormat("0.###"); // mostrara dos lugares de decimales
         double resultado = func.oper(displaytxt); // uso de case y metodo para operacion
         display.setText(format.format(resultado)); // muestra el resultado final
-        jLabel1.setText(displaytxt + " =");
+        jLabel1.setText(displaytxt + " ="); // Se guarda la operacion previamente realizada en subpantalla(digitos azules)
         //ifDot = false;
         ifOperador = false;
         displaytxt = String.valueOf(format.format(resultado));
