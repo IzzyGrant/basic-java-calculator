@@ -830,7 +830,7 @@ public class calcForm extends javax.swing.JFrame {
         double resultado = func.oper(displaytxt); // uso de case y metodo para operacion
         display.setText(format.format(resultado)); // muestra el resultado final
         jLabel1.setText(displaytxt + " ="); // Se guarda la operacion previamente realizada en subpantalla(digitos azules)
-        minus = false;
+       // minus = false;
         ifOperador = false;
         displaytxt = String.valueOf(format.format(resultado));
         
@@ -861,12 +861,6 @@ public class calcForm extends javax.swing.JFrame {
         display.setText(displaytxt); // muestra el resultado final
         }
         
-        if(minus == false){
-            displaytxt = "";
-            displaytxt = displaytxt + resta;
-            display.setText(displaytxt);
-            minus = true;
-            } 
         
         fontSize(); // Funcion que rectifica el tamaño de fuente en pantalla
     }//GEN-LAST:event_jLabel18MouseClicked
