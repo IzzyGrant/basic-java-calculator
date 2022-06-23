@@ -1,5 +1,8 @@
 
 package calcForms;
+import java.awt.Toolkit;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
 import java.text.DecimalFormat;
 import java.util.Arrays; // libreria de arreglos
 import javax.swing.JOptionPane;
@@ -470,7 +473,6 @@ public class calcForm extends javax.swing.JFrame {
         jLabel21.setFont(new java.awt.Font("sansserif", 1, 10)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(255, 255, 255));
         jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel21.setText("Copiar");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -576,6 +578,9 @@ public class calcForm extends javax.swing.JFrame {
         jLabel15.setText("Copiar");
         jLabel15.setOpaque(true);
         jLabel15.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel15MouseClicked(evt);
+            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel15MouseExited(evt);
             }
@@ -1053,13 +1058,25 @@ public class calcForm extends javax.swing.JFrame {
 
     private void jLabel15MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel15MouseEntered
         jLabel15.setBackground(new java.awt.Color(50, 50, 50));
+        jLabel21.setForeground(new java.awt.Color(255, 255, 255));
         jLabel21.setText("Copiar al portapapeles.");
     }//GEN-LAST:event_jLabel15MouseEntered
 
     private void jLabel15MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel15MouseExited
         jLabel15.setBackground(new java.awt.Color(1, 1, 1));
+        jLabel21.setForeground(new java.awt.Color(255, 255, 255));
         jLabel21.setText("");
     }//GEN-LAST:event_jLabel15MouseExited
+
+    private void jLabel15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel15MouseClicked
+       // Este proceso permitira copiar el contenido del display en el portapapeles 
+        Toolkit toolkit = Toolkit.getDefaultToolkit();
+        Clipboard clipboard = toolkit.getSystemClipboard();
+        StringSelection strSel = new StringSelection(displaytxt);
+        clipboard.setContents(strSel, null);
+        jLabel21.setForeground(new java.awt.Color(0, 255, 255));
+        jLabel21.setText("Copiado al portapapeles!");
+    }//GEN-LAST:event_jLabel15MouseClicked
 
 
     public static void main(String args[]) {
