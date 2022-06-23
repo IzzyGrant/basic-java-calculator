@@ -10,7 +10,8 @@ import javax.swing.JOptionPane;
 public class calcForm extends javax.swing.JFrame {
 
     static String displaytxt = "-2+-5"; 
-    static boolean ifOperador, ifDot, turn = false;
+    static boolean ifOperador, ifDot, minus = false;
+
     
     static class func{ // clase
         
@@ -769,6 +770,7 @@ public class calcForm extends javax.swing.JFrame {
         jLabel1.setText("0");
         ifOperador = false;
         ifDot = false;
+        minus = false;
         fontSize(); // Funcion que rectifica el tamaño de fuente en pantalla
     }//GEN-LAST:event_jLabel5MouseClicked
 
@@ -823,11 +825,12 @@ public class calcForm extends javax.swing.JFrame {
 
     private void jLabel20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel20MouseClicked
         // tecla resultado
+        if(ifOperador == true){
         DecimalFormat format = new DecimalFormat("0.###"); // mostrara dos lugares de decimales
         double resultado = func.oper(displaytxt); // uso de case y metodo para operacion
         display.setText(format.format(resultado)); // muestra el resultado final
         jLabel1.setText(displaytxt + " ="); // Se guarda la operacion previamente realizada en subpantalla(digitos azules)
-        //ifDot = false;
+        minus = false;
         ifOperador = false;
         displaytxt = String.valueOf(format.format(resultado));
         
@@ -837,11 +840,12 @@ public class calcForm extends javax.swing.JFrame {
         if(findDot != -1){ifDot = true;} else{ifDot = false;}
         fontSize(); // Funcion que rectifica el tamaño de fuente en pantalla
     }//GEN-LAST:event_jLabel20MouseClicked
-
+    }
     private void jLabel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel18MouseClicked
         char resta = '-';
         
         if(ifOperador == false){
+                      
             if (displaytxt == " "){ 
             } else { displaytxt = displaytxt + resta;
             display.setText(displaytxt);
@@ -856,6 +860,14 @@ public class calcForm extends javax.swing.JFrame {
         displaytxt = String.valueOf(format.format(resultado) + "-");
         display.setText(displaytxt); // muestra el resultado final
         }
+        
+        if(minus == false){
+            displaytxt = "";
+            displaytxt = displaytxt + resta;
+            display.setText(displaytxt);
+            minus = true;
+            } 
+        
         fontSize(); // Funcion que rectifica el tamaño de fuente en pantalla
     }//GEN-LAST:event_jLabel18MouseClicked
 
