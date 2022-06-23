@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
  */
 public class calcForm extends javax.swing.JFrame {
 
-    static String displaytxt = "-2+-5"; 
+    static String displaytxt = " "; 
     static boolean ifOperador, ifDot, minus = false;
 
     
@@ -366,6 +366,9 @@ public class calcForm extends javax.swing.JFrame {
         jLabel16.setText("/");
         jLabel16.setOpaque(true);
         jLabel16.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel16MouseClicked(evt);
+            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel16MouseExited(evt);
             }
@@ -381,6 +384,9 @@ public class calcForm extends javax.swing.JFrame {
         jLabel17.setText("*");
         jLabel17.setOpaque(true);
         jLabel17.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel17MouseClicked(evt);
+            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel17MouseExited(evt);
             }
@@ -846,7 +852,12 @@ public class calcForm extends javax.swing.JFrame {
         
         if(ifOperador == false){
                       
-            if (displaytxt == " "){ 
+            if (displaytxt == " "){
+                displaytxt = "";
+                displaytxt = displaytxt + resta;
+                display.setText(displaytxt);
+                
+
             } else { displaytxt = displaytxt + resta;
             display.setText(displaytxt);
             ifDot = false;
@@ -967,6 +978,46 @@ public class calcForm extends javax.swing.JFrame {
     "Proyecto final de PILARES del Taller 'Programador JR' escrito por : Isidoro Granados Osorio\nnikaylez@gmail.com\nRepositorio github: https://github.com/IzzyGrant/basic-java-calculator \nThx  :)", "Acerca de",
     JOptionPane.DEFAULT_OPTION);
     }//GEN-LAST:event_jLabel3MouseClicked
+
+    private void jLabel16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel16MouseClicked
+        // tecla /
+        char div = '/';
+        if(ifOperador == false){
+            if (displaytxt != " "){displaytxt = displaytxt + div; 
+            display.setText(displaytxt);
+            ifDot = false;
+            ifOperador = true;
+            }
+            
+        } else {
+        DecimalFormat format = new DecimalFormat("0.###"); // mostrara tres lugares de decimales
+        double resultado = func.oper(displaytxt); // uso de case y metodo para operacion
+        jLabel1.setText(displaytxt + " ="); // Se guarda la operacion previamente realizada en subpantalla(digitos azules)
+        displaytxt = String.valueOf(format.format(resultado) + "/");
+        display.setText(displaytxt); // muestra el resultado final
+        }
+        fontSize(); // Funcion que rectifica el tamaño de fuente en pantalla
+    }//GEN-LAST:event_jLabel16MouseClicked
+
+    private void jLabel17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel17MouseClicked
+        // tecla *
+        char mult = '*';
+        if(ifOperador == false){
+            if (displaytxt != " "){displaytxt = displaytxt + mult; 
+            display.setText(displaytxt);
+            ifDot = false;
+            ifOperador = true;
+            }
+            
+        } else {
+        DecimalFormat format = new DecimalFormat("0.###"); // mostrara tres lugares de decimales
+        double resultado = func.oper(displaytxt); // uso de case y metodo para operacion
+        jLabel1.setText(displaytxt + " ="); // Se guarda la operacion previamente realizada en subpantalla(digitos azules)
+        displaytxt = String.valueOf(format.format(resultado) + "*");
+        display.setText(displaytxt); // muestra el resultado final
+        }
+        fontSize(); // Funcion que rectifica el tamaño de fuente en pantalla
+    }//GEN-LAST:event_jLabel17MouseClicked
 
 
     public static void main(String args[]) {
