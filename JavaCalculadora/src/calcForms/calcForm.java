@@ -597,7 +597,7 @@ public class calcForm extends javax.swing.JFrame {
         //Esta funcion al ser llamada modifica el tamaño de fuente de los numeros de pantalla
         // para impeduir que quede fuera de vista y distorcionen el programa.
         if(displaytxt.length() <= 14){
-        display.setFont(new java.awt.Font("Roboto Thin", 0, 36));
+    display.setFont(new java.awt.Font("Roboto Thin", 0, 36));
    // System.out.println("Nivel 0");
         }else if(displaytxt.length() >= 15 && displaytxt.length() <= 21){
     display.setFont(new java.awt.Font("Roboto Thin", 0, 24));
@@ -612,7 +612,7 @@ public class calcForm extends javax.swing.JFrame {
     display.setFont(new java.awt.Font("Roboto Thin", 0, 8));
    // System.out.println("Nivel 4");
         }
-   //     System.out.println("numero de caracteres: " + displaytxt.length());
+   // System.out.println("numero de caracteres: " + displaytxt.length());
     }
     
     private void jLabel5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseEntered
