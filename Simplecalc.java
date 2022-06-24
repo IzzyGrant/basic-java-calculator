@@ -54,7 +54,7 @@ public class Simplecalc {
         
         char operador = '+'; // <<-- operador ingresado, cambiar para probar -->>
         
-        System.out.println(">>>Aqui el usuario presiono el boton "+ operador+ ": ");
+        System.out.println(">>>Aqui el usuario presiono el boton "+ operador + ": ");
         display = ""; // el display se limpiara permitiendo ingresar otro numero
         System.out.println("Display: " + display);
         
@@ -68,6 +68,7 @@ public class Simplecalc {
         // Aqui guardamos el segundo numero cuando el usuario presione "Resultado"
         double numeroB = Double.parseDouble(display);
         
+        System.out.println(">>>El usuario ha presionado el boton de 'Resultado' ");
         // Dentro del mismo evento de "Resultado" debemos invocar la funcion de 
         // operacion de valores. Notese que declaramos una variable double
         // donde se hara la invocacion de la funcion con los argumentos que obtuvimos
