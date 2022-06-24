@@ -642,19 +642,14 @@ public class calcForm extends javax.swing.JFrame {
         // para impeduir que quede fuera de vista y distorcionen el programa.
         if(displaytxt.length() <= 14){
     display.setFont(new java.awt.Font("Roboto Thin", 0, 36));
-   // System.out.println("Nivel 0");
         }else if(displaytxt.length() >= 15 && displaytxt.length() <= 21){
     display.setFont(new java.awt.Font("Roboto Thin", 0, 24));
-   // System.out.println("Nivel 1");
         }else if(displaytxt.length() >= 22 && displaytxt.length() <= 28){
     display.setFont(new java.awt.Font("Roboto Thin", 0, 18));
-   // System.out.println("Nivel 2");
         }else if(displaytxt.length() >= 29 && displaytxt.length() <= 39){
     display.setFont(new java.awt.Font("Roboto Thin", 0, 12));
-   // System.out.println("Nivel 3");
         }else if(displaytxt.length() >= 40 && displaytxt.length() <= 50){
     display.setFont(new java.awt.Font("Roboto Thin", 0, 8));
-   // System.out.println("Nivel 4");
         }
    // System.out.println("numero de caracteres: " + displaytxt.length());
     }
