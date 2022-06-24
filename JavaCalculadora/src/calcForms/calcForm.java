@@ -889,13 +889,8 @@ public class calcForm extends javax.swing.JFrame {
         
         if(ifOperador == false){
                       
-            if (displaytxt == " "){
-                displaytxt = "";
-                displaytxt = displaytxt + resta;
-                display.setText(displaytxt);
-                
-
-            } else { displaytxt = displaytxt + resta;
+            if (displaytxt != " "){
+            displaytxt = displaytxt + resta;
             display.setText(displaytxt);
             ifDot = false;
             ifOperador = true;
@@ -908,7 +903,6 @@ public class calcForm extends javax.swing.JFrame {
         displaytxt = String.valueOf(format.format(resultado) + "-");
         display.setText(displaytxt); // muestra el resultado final
         }
-        
         
         fontSize(); // Funcion que rectifica el tamaño de fuente en pantalla
     }//GEN-LAST:event_jLabel18MouseClicked
