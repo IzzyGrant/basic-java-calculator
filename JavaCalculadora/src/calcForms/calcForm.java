@@ -1180,6 +1180,22 @@ public class calcForm extends javax.swing.JFrame {
         if (evt.getKeyCode() == KeyEvent.VK_SUBTRACT || evt.getKeyCode() == KeyEvent.VK_MINUS) {
             System.out.print("-");
     }  
+        // Con la tecla * se escribira "*"
+        if (evt.getKeyCode() == KeyEvent.VK_MULTIPLY) {
+            System.out.print("*");
+    }  
+        // Con la tecla / se escribira "/"
+        if (evt.getKeyCode() == KeyEvent.VK_DIVIDE) {
+            System.out.print("/");
+    }  
+        // Con la tecla . se escribira "."
+        if (evt.getKeyCode() == KeyEvent.VK_PERIOD || evt.getKeyCode() == KeyEvent.VK_DECIMAL) {
+            System.out.print(".");
+    }  
+        // Con la tecla Intro se mostrara resultado
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER || evt.getKeyCode() == KeyEvent.VK_I) {
+            System.out.print("Resultado");
+    }  
         
     }//GEN-LAST:event_formKeyPressed
 
