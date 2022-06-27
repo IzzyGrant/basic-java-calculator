@@ -1127,13 +1127,19 @@ public class calcForm extends javax.swing.JFrame {
             System.out.println("Has presionado la tecla.");
             displaytxt = " ";
             display.setText(displaytxt);
-      }
-        
+    }
         // Con la tecla Escape se cerrara el programa.
         if (evt.getKeyCode() == KeyEvent.VK_ESCAPE) {
             System.exit(0);
     }
-        
+        // Con la tecla 0 se escribira "0"
+        if (evt.getKeyCode() == KeyEvent.VK_NUMPAD0 || evt.getKeyCode() == KeyEvent.VK_0) {
+            System.out.print("0");
+    }
+        // Con la tecla 1 se escribira "1"
+        if (evt.getKeyCode() == KeyEvent.VK_NUMPAD1 || evt.getKeyCode() == KeyEvent.VK_1) {
+            System.out.print("1");
+    }  
         
     }//GEN-LAST:event_formKeyPressed
 
