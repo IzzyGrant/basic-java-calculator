@@ -929,7 +929,6 @@ public class calcForm extends javax.swing.JFrame {
         if(negative == false){ //if de negativos
        // func.CheckNeg(displaytxt);
         if(ifOperador == false){
-                      System.out.println("Hey!!!");
             if (displaytxt != " "){
             displaytxt = displaytxt + resta;
             display.setText(displaytxt);
@@ -1123,10 +1122,14 @@ public class calcForm extends javax.swing.JFrame {
         // Aqui se guardan los eventos de teclado
         
         // Con la tecla BackSpace(para borrar texto) limpiara el display igual que AC
-        if (evt.getKeyCode() == KeyEvent.VK_BACK_SPACE) {
-            System.out.println("Has presionado la tecla.");
+        if (evt.getKeyCode() == KeyEvent.VK_BACK_SPACE || evt.getKeyCode() == KeyEvent.VK_DELETE) {
             displaytxt = " ";
             display.setText(displaytxt);
+            jLabel1.setText("0");
+            ifOperador = false;
+            ifDot = false;
+            minus = false;
+            fontSize(); // Funcion que rectifica el tamaño de fuente en pantalla
     }
         // Con la tecla Escape se cerrara el programa.
         if (evt.getKeyCode() == KeyEvent.VK_ESCAPE) {
@@ -1246,26 +1249,131 @@ public class calcForm extends javax.swing.JFrame {
         // Con la tecla + se escribira "+"
         if (evt.getKeyCode() == KeyEvent.VK_PLUS || evt.getKeyCode() == KeyEvent.VK_ADD) {
             System.out.print("+");
+            char suma = '+';
+            if(ifOperador == false){
+                if (displaytxt != " "){displaytxt = displaytxt + suma; 
+                display.setText(displaytxt);
+                ifDot = false;
+                ifOperador = true;
+                }
+
+            } else {
+            DecimalFormat format = new DecimalFormat("0.###"); // mostrara tres lugares de decimales
+            double resultado = func.oper(displaytxt); // uso de case y metodo para operacion
+            jLabel1.setText(displaytxt + " ="); // Se guarda la operacion previamente realizada en subpantalla(digitos azules)
+            displaytxt = String.valueOf(format.format(resultado) + "+");
+            display.setText(displaytxt); // muestra el resultado final
+            }
+            fontSize(); // Funcion que rectifica el tamaño de fuente en pantalla
     }  
         // Con la tecla - se escribira "-"
         if (evt.getKeyCode() == KeyEvent.VK_SUBTRACT || evt.getKeyCode() == KeyEvent.VK_MINUS) {
             System.out.print("-");
+            char resta = '-';
+            boolean negative = func.CheckNeg(displaytxt);
+            System.out.println("Funcion de negativo: " + negative);
+
+            if(negative == false){ //if de negativos
+           // func.CheckNeg(displaytxt);
+            if(ifOperador == false){
+                  if (displaytxt != " "){
+                  displaytxt = displaytxt + resta;
+                  display.setText(displaytxt);
+                  ifDot = false;
+                  ifOperador = true;
+                  }
+
+              } else {
+              DecimalFormat format = new DecimalFormat("0.###"); // mostrara tres lugares de decimales
+              double resultado = func.oper(displaytxt); // uso de case y metodo para operacion
+              jLabel1.setText(displaytxt + " =");
+              displaytxt = String.valueOf(format.format(resultado) + "-");
+              display.setText(displaytxt); // muestra el resultado final
+              }
+
+              } else {
+                  if(displaytxt == " "){displaytxt = "";}
+               displaytxt = displaytxt + resta;
+              display.setText(displaytxt);
+              //ifDot = false;
+              } // Fin de if de negativo
+              fontSize(); // Funcion que rectifica el tamaño de fuente en pantalla
     }  
         // Con la tecla * se escribira "*"
         if (evt.getKeyCode() == KeyEvent.VK_MULTIPLY) {
             System.out.print("*");
+            char mult = '*';
+            if(ifOperador == false){
+                if (displaytxt != " "){displaytxt = displaytxt + mult; 
+                display.setText(displaytxt);
+                ifDot = false;
+                ifOperador = true;
+                }
+
+            } else {
+            DecimalFormat format = new DecimalFormat("0.###"); // mostrara tres lugares de decimales
+            double resultado = func.oper(displaytxt); // uso de case y metodo para operacion
+            jLabel1.setText(displaytxt + " ="); // Se guarda la operacion previamente realizada en subpantalla(digitos azules)
+            displaytxt = String.valueOf(format.format(resultado) + "*");
+            display.setText(displaytxt); // muestra el resultado final
+            }
+            fontSize(); // Funcion que rectifica el tamaño de fuente en pantalla
     }  
         // Con la tecla / se escribira "/"
         if (evt.getKeyCode() == KeyEvent.VK_DIVIDE) {
             System.out.print("/");
+            char div = '/';
+            if(ifOperador == false){
+                if (displaytxt != " "){displaytxt = displaytxt + div; 
+                display.setText(displaytxt);
+                ifDot = false;
+                ifOperador = true;
+                }
+
+            } else {
+            DecimalFormat format = new DecimalFormat("0.###"); // mostrara tres lugares de decimales
+            double resultado = func.oper(displaytxt); // uso de case y metodo para operacion
+            jLabel1.setText(displaytxt + " ="); // Se guarda la operacion previamente realizada en subpantalla(digitos azules)
+            displaytxt = String.valueOf(format.format(resultado) + "/");
+            display.setText(displaytxt); // muestra el resultado final
+            }
+            fontSize(); // Funcion que rectifica el tamaño de fuente en pantalla
     }  
         // Con la tecla . se escribira "."
         if (evt.getKeyCode() == KeyEvent.VK_PERIOD || evt.getKeyCode() == KeyEvent.VK_DECIMAL) {
             System.out.print(".");
+            char punto = '.';
+
+            if(ifDot == false){
+
+            if (displaytxt == " "){ 
+            displaytxt = "";
+            displaytxt = displaytxt + punto;
+            } else { displaytxt = displaytxt + punto;}
+            display.setText(displaytxt);
+            ifDot = true;
+            }
+            fontSize(); // Funcion que rectifica el tamaño de fuente en pantalla
     }  
         // Con la tecla Intro se mostrara resultado
         if (evt.getKeyCode() == KeyEvent.VK_ENTER || evt.getKeyCode() == KeyEvent.VK_I) {
-            System.out.print("Resultado");
+            System.out.println("=");
+        if(ifOperador == true){
+        DecimalFormat format = new DecimalFormat("0.###"); // mostrara dos lugares de decimales
+        double resultado = func.oper(displaytxt); // uso de case y metodo para operacion
+        display.setText(format.format(resultado)); // muestra el resultado final
+        jLabel1.setText(displaytxt + " ="); // Se guarda la operacion previamente realizada en subpantalla(digitos azules)
+       // minus = false;
+        ifOperador = false;
+        displaytxt = String.valueOf(format.format(resultado));
+        
+        // Se agrega verificacion de numero decimal despues de resultado para no ingresar doble punto
+        int findDot = displaytxt.indexOf( '.');
+        System.out.println("Tiene punto en: " + findDot);
+        if(findDot != -1){ifDot = true;} else{ifDot = false;}
+        fontSize(); // Funcion que rectifica el tamaño de fuente en pantalla
+        }
+
     }  
         
     }//GEN-LAST:event_formKeyPressed
