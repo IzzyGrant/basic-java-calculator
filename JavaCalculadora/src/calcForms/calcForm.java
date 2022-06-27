@@ -1169,30 +1169,79 @@ public class calcForm extends javax.swing.JFrame {
         // Con la tecla 3 se escribira "3"
         if (evt.getKeyCode() == KeyEvent.VK_NUMPAD3 || evt.getKeyCode() == KeyEvent.VK_3) {
             System.out.print("3");
+            char tres = '3';
+            if (displaytxt == " "){ 
+            displaytxt = "";
+            displaytxt = displaytxt + tres;
+            } else { displaytxt = displaytxt + tres;}
+            display.setText(displaytxt);
+            fontSize(); // Funcion que rectifica el tamaño de fuente en pantalla
     }  
         // Con la tecla 4 se escribira "4"
         if (evt.getKeyCode() == KeyEvent.VK_NUMPAD4 || evt.getKeyCode() == KeyEvent.VK_4) {
             System.out.print("4");
+            char cuatro = '4';
+            if (displaytxt == " "){ 
+            displaytxt = "";
+            displaytxt = displaytxt + cuatro;
+            } else { displaytxt = displaytxt + cuatro;}
+            display.setText(displaytxt);
+            fontSize(); // Funcion que rectifica el tamaño de fuente en pantalla
     }  
         // Con la tecla 5 se escribira "5"
         if (evt.getKeyCode() == KeyEvent.VK_NUMPAD5 || evt.getKeyCode() == KeyEvent.VK_5) {
             System.out.print("5");
+            char cinco = '5';
+            if (displaytxt == " "){ 
+            displaytxt = "";
+            displaytxt = displaytxt + cinco;
+            } else { displaytxt = displaytxt + cinco;}
+            display.setText(displaytxt);
+            fontSize(); // Funcion que rectifica el tamaño de fuente en pantalla
     }  
         // Con la tecla 6 se escribira "6"
         if (evt.getKeyCode() == KeyEvent.VK_NUMPAD6 || evt.getKeyCode() == KeyEvent.VK_6) {
             System.out.print("6");
+            char seis = '6';
+            if (displaytxt == " "){ 
+            displaytxt = "";
+            displaytxt = displaytxt + seis;
+            } else { displaytxt = displaytxt + seis;}
+            display.setText(displaytxt);
+            fontSize(); // Funcion que rectifica el tamaño de fuente en pantalla
     }  
         // Con la tecla 7 se escribira "7"
         if (evt.getKeyCode() == KeyEvent.VK_NUMPAD7 || evt.getKeyCode() == KeyEvent.VK_7) {
             System.out.print("7");
+            char siete = '7';
+            if (displaytxt == " "){ 
+            displaytxt = "";
+            displaytxt = displaytxt + siete;
+            } else { displaytxt = displaytxt + siete;}
+            display.setText(displaytxt);
+            fontSize(); // Funcion que rectifica el tamaño de fuente en pantalla
     }  
         // Con la tecla 8 se escribira "8"
         if (evt.getKeyCode() == KeyEvent.VK_NUMPAD8 || evt.getKeyCode() == KeyEvent.VK_8) {
             System.out.print("8");
+            char ocho = '8';
+            if (displaytxt == " "){ 
+            displaytxt = "";
+            displaytxt = displaytxt + ocho;
+            } else { displaytxt = displaytxt + ocho;}
+            display.setText(displaytxt);
+            fontSize(); // Funcion que rectifica el tamaño de fuente en pantalla
     }  
         // Con la tecla 9 se escribira "9"
         if (evt.getKeyCode() == KeyEvent.VK_NUMPAD9 || evt.getKeyCode() == KeyEvent.VK_9) {
             System.out.print("9");
+            char nueve = '9';
+            if (displaytxt == " "){ 
+            displaytxt = "";
+            displaytxt = displaytxt + nueve;
+            } else { displaytxt = displaytxt + nueve;}
+            display.setText(displaytxt);
+            fontSize(); // Funcion que rectifica el tamaño de fuente en pantalla
     }  
         // Con la tecla + se escribira "+"
         if (evt.getKeyCode() == KeyEvent.VK_PLUS || evt.getKeyCode() == KeyEvent.VK_ADD) {
