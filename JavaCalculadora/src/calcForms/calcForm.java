@@ -88,7 +88,44 @@ public class calcForm extends javax.swing.JFrame {
           
           return resultado; // Devuelve el resultado de la operacion.
         } // Fin de metodo
-           
+        
+        
+        // Este metodo revisara mediante Regex las posiciones, la longitud y el contenido que halla dentro del arreglo
+        // y retornara un booleano si hay condicion para ello.
+        static public boolean CheckNeg(String cadena){
+            boolean canWrNeg = false;
+            
+        // Regex que convierte el String en un arreglo(llamado split) seccionando numeros y operadores.
+        // Ejemplo: "12.6+20" ==> [12.6, +, 20]
+          String[] arrNeg = cadena.split("(?<=[\\d.])(?=[^\\d.])|(?<=[^\\d.])(?=[\\d.])");
+            System.out.println("Inspeccion de negativos: " + Arrays.toString(arrNeg));
+            System.out.println("Negativos.length: " + arrNeg.length);
+            
+            if(arrNeg.length == 1){
+                if(" ".equals(arrNeg[0])){
+                System.out.println(">>>Cadena Vacia. Puede escribir negativo");
+                canWrNeg = true;
+            }
+            } 
+            
+            if (arrNeg.length == 2){
+                if("+".equals(arrNeg[1])||"-".equals(arrNeg[1])||"*".equals(arrNeg[1])||"/".equals(arrNeg[1])){
+                System.out.println(">>>Se puede escribir negativo");
+                canWrNeg = true;
+            } 
+            }
+            if(arrNeg.length == 3){
+                if("+".equals(arrNeg[2])||"-".equals(arrNeg[2])||"*".equals(arrNeg[2])||"/".equals(arrNeg[2])){
+                System.out.println(">>Segundo numero. Puede escribir negativo");
+                canWrNeg = true;
+            }
+            }
+            
+            System.out.println("Fin de metodo negativo.");
+            return canWrNeg;
+        
+        }
+         
     }
     
     
@@ -881,7 +918,11 @@ public class calcForm extends javax.swing.JFrame {
     }
     private void jLabel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel18MouseClicked
         char resta = '-';
+        boolean negative = func.CheckNeg(displaytxt);
+        System.out.println("Funcion de negativo: " + negative);
         
+        if(negative == false){ //if de negativos
+       // func.CheckNeg(displaytxt);
         if(ifOperador == false){
                       
             if (displaytxt != " "){
@@ -899,6 +940,12 @@ public class calcForm extends javax.swing.JFrame {
         display.setText(displaytxt); // muestra el resultado final
         }
         
+        } else{
+            if(displaytxt == " "){displaytxt = "";}
+         displaytxt = displaytxt + resta;
+        display.setText(displaytxt);
+        ifDot = false;
+        } // Fin de if de negativo
         fontSize(); // Funcion que rectifica el tamaño de fuente en pantalla
     }//GEN-LAST:event_jLabel18MouseClicked
 
