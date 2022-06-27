@@ -1130,19 +1130,41 @@ public class calcForm extends javax.swing.JFrame {
     }
         // Con la tecla Escape se cerrara el programa.
         if (evt.getKeyCode() == KeyEvent.VK_ESCAPE) {
+            System.out.println("Good Bye :)");
             System.exit(0);
     }
         // Con la tecla 0 se escribira "0"
         if (evt.getKeyCode() == KeyEvent.VK_NUMPAD0 || evt.getKeyCode() == KeyEvent.VK_0) {
             System.out.print("0");
+            char cero = '0';
+            if (displaytxt == " "){ 
+            displaytxt = "";
+            displaytxt = displaytxt + cero;
+            } else { displaytxt = displaytxt + cero;}
+            display.setText(displaytxt);
+            fontSize(); // Funcion que rectifica el tamaño de fuente en pantalla
     }
         // Con la tecla 1 se escribira "1"
         if (evt.getKeyCode() == KeyEvent.VK_NUMPAD1 || evt.getKeyCode() == KeyEvent.VK_1) {
             System.out.print("1");
+            char uno = '1';
+            if (displaytxt == " "){ 
+            displaytxt = "";
+            displaytxt = displaytxt + uno;
+            } else { displaytxt = displaytxt + uno;}
+            display.setText(displaytxt);
+            fontSize(); // Funcion que rectifica el tamaño de fuente en pantalla
     }  
         // Con la tecla 2 se escribira "2"
         if (evt.getKeyCode() == KeyEvent.VK_NUMPAD2 || evt.getKeyCode() == KeyEvent.VK_2) {
             System.out.print("2");
+            char dos = '2';
+            if (displaytxt == " "){ 
+            displaytxt = "";
+            displaytxt = displaytxt + dos;
+            } else { displaytxt = displaytxt + dos;}
+            display.setText(displaytxt);
+            fontSize(); // Funcion que rectifica el tamaño de fuente en pantalla
     }  
         // Con la tecla 3 se escribira "3"
         if (evt.getKeyCode() == KeyEvent.VK_NUMPAD3 || evt.getKeyCode() == KeyEvent.VK_3) {
