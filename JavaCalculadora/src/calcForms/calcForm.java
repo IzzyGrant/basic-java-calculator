@@ -1140,6 +1140,46 @@ public class calcForm extends javax.swing.JFrame {
         if (evt.getKeyCode() == KeyEvent.VK_NUMPAD1 || evt.getKeyCode() == KeyEvent.VK_1) {
             System.out.print("1");
     }  
+        // Con la tecla 2 se escribira "2"
+        if (evt.getKeyCode() == KeyEvent.VK_NUMPAD2 || evt.getKeyCode() == KeyEvent.VK_2) {
+            System.out.print("2");
+    }  
+        // Con la tecla 3 se escribira "3"
+        if (evt.getKeyCode() == KeyEvent.VK_NUMPAD3 || evt.getKeyCode() == KeyEvent.VK_3) {
+            System.out.print("3");
+    }  
+        // Con la tecla 4 se escribira "4"
+        if (evt.getKeyCode() == KeyEvent.VK_NUMPAD4 || evt.getKeyCode() == KeyEvent.VK_4) {
+            System.out.print("4");
+    }  
+        // Con la tecla 5 se escribira "5"
+        if (evt.getKeyCode() == KeyEvent.VK_NUMPAD5 || evt.getKeyCode() == KeyEvent.VK_5) {
+            System.out.print("5");
+    }  
+        // Con la tecla 6 se escribira "6"
+        if (evt.getKeyCode() == KeyEvent.VK_NUMPAD6 || evt.getKeyCode() == KeyEvent.VK_6) {
+            System.out.print("6");
+    }  
+        // Con la tecla 7 se escribira "7"
+        if (evt.getKeyCode() == KeyEvent.VK_NUMPAD7 || evt.getKeyCode() == KeyEvent.VK_7) {
+            System.out.print("7");
+    }  
+        // Con la tecla 8 se escribira "8"
+        if (evt.getKeyCode() == KeyEvent.VK_NUMPAD8 || evt.getKeyCode() == KeyEvent.VK_8) {
+            System.out.print("8");
+    }  
+        // Con la tecla 9 se escribira "9"
+        if (evt.getKeyCode() == KeyEvent.VK_NUMPAD9 || evt.getKeyCode() == KeyEvent.VK_9) {
+            System.out.print("9");
+    }  
+        // Con la tecla + se escribira "+"
+        if (evt.getKeyCode() == KeyEvent.VK_PLUS || evt.getKeyCode() == KeyEvent.VK_ADD) {
+            System.out.print("+");
+    }  
+        // Con la tecla - se escribira "-"
+        if (evt.getKeyCode() == KeyEvent.VK_SUBTRACT || evt.getKeyCode() == KeyEvent.VK_MINUS) {
+            System.out.print("-");
+    }  
         
     }//GEN-LAST:event_formKeyPressed
 
