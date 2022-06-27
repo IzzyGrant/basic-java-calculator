@@ -3,6 +3,7 @@ package calcForms;
 import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.text.DecimalFormat;
 import java.util.Arrays; // libreria de arreglos
 import javax.swing.JOptionPane;
@@ -167,6 +168,11 @@ public class calcForm extends javax.swing.JFrame {
         setAutoRequestFocus(false);
         setBackground(new java.awt.Color(0, 0, 0));
         setResizable(false);
+        addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                formKeyPressed(evt);
+            }
+        });
 
         jPanel2.setBackground(new java.awt.Color(51, 51, 51));
 
@@ -1112,6 +1118,24 @@ public class calcForm extends javax.swing.JFrame {
         jLabel21.setForeground(new java.awt.Color(0, 255, 255));
         jLabel21.setText("Copiado al portapapeles!");
     }//GEN-LAST:event_jLabel15MouseClicked
+
+    private void formKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyPressed
+        // Aqui se guardan los eventos de teclado
+        
+        // Con la tecla BackSpace(para borrar texto) limpiara el display igual que AC
+        if (evt.getKeyCode() == KeyEvent.VK_BACK_SPACE) {
+            System.out.println("Has presionado la tecla.");
+            displaytxt = " ";
+            display.setText(displaytxt);
+      }
+        
+        // Con la tecla Escape se cerrara el programa.
+        if (evt.getKeyCode() == KeyEvent.VK_ESCAPE) {
+            System.exit(0);
+    }
+        
+        
+    }//GEN-LAST:event_formKeyPressed
 
 
     public static void main(String args[]) {
