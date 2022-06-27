@@ -893,7 +893,6 @@ public class calcForm extends javax.swing.JFrame {
         } else { displaytxt = displaytxt + punto;}
         display.setText(displaytxt);
         ifDot = true;
-            
         }
         fontSize(); // Funcion que rectifica el tamaño de fuente en pantalla
     }//GEN-LAST:event_jLabel14MouseClicked
@@ -924,7 +923,7 @@ public class calcForm extends javax.swing.JFrame {
         if(negative == false){ //if de negativos
        // func.CheckNeg(displaytxt);
         if(ifOperador == false){
-                      
+                      System.out.println("Hey!!!");
             if (displaytxt != " "){
             displaytxt = displaytxt + resta;
             display.setText(displaytxt);
@@ -944,7 +943,7 @@ public class calcForm extends javax.swing.JFrame {
             if(displaytxt == " "){displaytxt = "";}
          displaytxt = displaytxt + resta;
         display.setText(displaytxt);
-        ifDot = false;
+        //ifDot = false;
         } // Fin de if de negativo
         fontSize(); // Funcion que rectifica el tamaño de fuente en pantalla
     }//GEN-LAST:event_jLabel18MouseClicked
