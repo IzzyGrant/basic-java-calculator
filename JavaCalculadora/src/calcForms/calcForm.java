@@ -6,6 +6,7 @@ import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 import java.text.DecimalFormat;
 import java.util.Arrays; // libreria de arreglos
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 /**
  *
@@ -15,7 +16,8 @@ public class calcForm extends javax.swing.JFrame {
 
     static String displaytxt = " "; 
     static boolean ifOperador, ifDot, minus = false;
-
+    
+    
     
     static class func{ // clase
         
@@ -129,8 +131,14 @@ public class calcForm extends javax.swing.JFrame {
          
     }
     
+    // Funcion para agregar icono personalizado.
+    private void icon(){
+        ImageIcon img = new ImageIcon("img\\calc.png");
+        setIconImage(img.getImage());
+    }
     
     public calcForm() {
+        icon();
         initComponents();
     }
 
