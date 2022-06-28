@@ -133,7 +133,8 @@ public class calcForm extends javax.swing.JFrame {
     
     // Funcion para agregar icono personalizado.
     private void icon(){
-        ImageIcon img = new ImageIcon("img\\calc.png");
+        // Probar path "dir/file.png"
+        ImageIcon img = new ImageIcon("img/calc.png");
         setIconImage(img.getImage());
     }
     
@@ -222,11 +223,11 @@ public class calcForm extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel5MouseClicked(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabel5MouseExited(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jLabel5MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel5MouseExited(evt);
             }
         });
 
@@ -335,11 +336,11 @@ public class calcForm extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel10MouseClicked(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabel10MouseExited(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jLabel10MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel10MouseExited(evt);
             }
         });
 
@@ -507,7 +508,7 @@ public class calcForm extends javax.swing.JFrame {
 
         jLabel3.setForeground(new java.awt.Color(102, 102, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel3.setText(":)");
+        jLabel3.setText("F1: Ayuda");
         jLabel3.setToolTipText("");
         jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -632,11 +633,11 @@ public class calcForm extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel15MouseClicked(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabel15MouseExited(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jLabel15MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel15MouseExited(evt);
             }
         });
 
@@ -1384,6 +1385,17 @@ public class calcForm extends javax.swing.JFrame {
 
     }  
         
+        // Con la tecla F1 se enviara mensaje de ayuda
+        if (evt.getKeyCode() == KeyEvent.VK_F1) {
+            
+            JOptionPane.showConfirmDialog(this,
+    "Ayuda: \nTecla [Esc] --> Cerrar Programa.\nTecla [0-9] --> Escribir 0-9.\nTecla [.] --> Escribir '.'"
+         + "\nTecla [+] --> Escribir '+'\nTecla [-] --> Escribir '-'\nTecla [*] --> Escribir '*'"
+         + "\nTecla [/] --> Escribir '/'\nTecla [BackSpace] o [Supr] --> Limpiar y eliminar"
+         + "\nTecla [F1] --> Ayuda", "Ayuda",
+    JOptionPane.DEFAULT_OPTION);
+        }
+    
     }//GEN-LAST:event_formKeyPressed
 
 
