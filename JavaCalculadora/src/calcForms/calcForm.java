@@ -1394,8 +1394,17 @@ public class calcForm extends javax.swing.JFrame {
     "Ayuda: \nTecla [Esc] --> Cerrar Programa.\nTecla [0-9] --> Escribir 0-9.\nTecla [.] --> Escribir '.'"
          + "\nTecla [+] --> Escribir '+'\nTecla [-] --> Escribir '-'\nTecla [*] --> Escribir '*'"
          + "\nTecla [/] --> Escribir '/'\nTecla [BackSpace] o [Supr] --> Limpiar y eliminar"
-         + "\nTecla [F1] --> Ayuda", "Ayuda",
+         + "\nTecla [F2] --> Copiar al portapapeles\nTecla [F1] --> Ayuda", "Ayuda",
     JOptionPane.DEFAULT_OPTION);
+        }
+        
+        // Con la tecla F2 se copiara el contenido del display principal al portapapeles.
+        if (evt.getKeyCode() == KeyEvent.VK_F2) {
+        // Este proceso permitira copiar el contenido del display en el portapapeles 
+        Toolkit toolkit = Toolkit.getDefaultToolkit();
+        Clipboard clipboard = toolkit.getSystemClipboard();
+        StringSelection strSel = new StringSelection(displaytxt);
+        clipboard.setContents(strSel, null);
         }
     
     }//GEN-LAST:event_formKeyPressed
