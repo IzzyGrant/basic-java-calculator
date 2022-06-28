@@ -14,12 +14,14 @@ import javax.swing.JOptionPane;
  */
 public class calcForm extends javax.swing.JFrame {
 
+    // Variable String que sera utilizada para el display de la calculadora.
     static String displaytxt = " "; 
+    // Variables que determinaran si se escribira punto y operador impidiendo duplicidad.
     static boolean ifOperador, ifDot, minus = false;
     
     
     
-    static class func{ // clase
+    static class func{ // clase secundaria la cual contendra los metodos para operar.
         
         // Este metodo 'oper' recibe el String ingresado de la pantalla, ejemplo: "12.6+20"
         // colocando como argumento del mismo dicha cadena a procesar
@@ -507,7 +509,7 @@ public class calcForm extends javax.swing.JFrame {
         });
 
         jLabel3.setForeground(new java.awt.Color(102, 102, 255));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("F1: Ayuda");
         jLabel3.setToolTipText("");
         jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
