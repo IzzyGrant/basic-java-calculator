@@ -107,6 +107,9 @@
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_CreateCodePre" type="java.lang.String" value="/**&#xa; * Display de calculadora&#xa; */"/>
+          </AuxValues>
         </Component>
         <Container class="javax.swing.JPanel" name="jPanel1">
           <Properties>

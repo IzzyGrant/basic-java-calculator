@@ -10,8 +10,9 @@ import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 /**
  *
- * @author Izzy G. Osorio : nikaylez@gmail.com
+ * @author Izzy G
  */
+
 public class calcForm extends javax.swing.JFrame {
 
     // Variable String que sera utilizada para el display de la calculadora.
@@ -20,11 +21,14 @@ public class calcForm extends javax.swing.JFrame {
     static boolean ifOperador, ifDot, minus = false;
     
     
-    
-    static class func{ // clase secundaria la cual contendra los metodos para operar.
+     
+     
+     // clase secundaria la cual contendra los metodos para operar.
+     
+    static class func{ 
         
         // Este metodo 'oper' recibe el String ingresado de la pantalla, ejemplo: "12.6+20"
-        // colocando como argumento del mismo dicha cadena a procesar
+        // colocando como argumento del mismo dicha cadena a procesara
          static public double oper(String cadena){ // metodo de clase 
              
         // Regex que convierte el String en un arreglo(llamado split) seccionando numeros y operadores.
@@ -140,6 +144,9 @@ public class calcForm extends javax.swing.JFrame {
         setIconImage(img.getImage());
     }
     
+    /**
+     * Metodo Principal.
+     */
     public calcForm() {
         icon();
         initComponents();
@@ -150,6 +157,9 @@ public class calcForm extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel2 = new javax.swing.JPanel();
+        /**
+        * Display de calculadora
+        */
         display = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -635,11 +645,11 @@ public class calcForm extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel15MouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel15MouseEntered(evt);
-            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel15MouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel15MouseEntered(evt);
             }
         });
 
@@ -1420,7 +1430,10 @@ public class calcForm extends javax.swing.JFrame {
     
     }//GEN-LAST:event_formKeyPressed
 
-
+    /**
+     *
+     * @param args mai principal
+     */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
