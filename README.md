@@ -1,6 +1,8 @@
 # basic-java-calculator
 Calculadora de funcionalidad basica basado en el proyecto final del programa de "Programados JR" de PILARES.
 
+![Image text](https://github.com/IzzyGrant/basic-java-calculator/blob/main/JavaCalculadora/img/preview0.1.png)
+
 ##  Calculadora Basica Java alpha 0.1
 
 ### Desarrollado bajo:
