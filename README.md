@@ -36,3 +36,4 @@ Calculadora de funcionalidad basica basado en el proyecto final del programa de 
 • Permite eventos de teclado. F1 para desplegar lista.
 
 ### Se puede descargar el JAR en Release.
+https://github.com/IzzyGrant/basic-java-calculator/releases/tag/alpha
